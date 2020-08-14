@@ -1,0 +1,99 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Custom_Weapon.Bow_String =
+	{
+		type = "hlvr_default_3d"
+		volume = 0.9
+
+		vsnd_files = "sounds/weapons/bowstring.vsnd"
+	}
+	
+	Custom_Weapon.Bow_Arrow_Impact =
+	{
+		type = "hlvr_default_3d"
+		volume = 0.45
+
+		vsnd_files = "sounds/weapons/arrow_impact.vsnd"
+	}
+	
+	Physcannon.HoldLoop = 
+	{
+		type = "hlvr_default_3d"
+		volume = 0.3
+		vsnd_files = "sounds/weapons/physcannon/hold_loop.vsnd"	
+		attachment = "beam"
+	}
+	
+	Physcannon.Pickup = 
+	{
+		type = "hlvr_default_3d"
+		volume = 0.3
+		vsnd_files = "sounds/weapons/physcannon/physcannon_pickup.vsnd"	
+		attachment = "muzzle"
+	}
+	
+	Physcannon.Charge = 
+	{
+		type = "hlvr_default_3d"
+
+		volume = 0.3
+		vsnd_files = "sounds/weapons/physcannon/physcannon_charge.vsnd"	
+		attachment = "muzzle"
+	}
+		
+	Physcannon.Drop = 
+	{
+		type = "hlvr_default_3d"
+
+		volume = 0.3
+		vsnd_files = "sounds/weapons/physcannon/physcannon_drop.vsnd"	
+		attachment = "muzzle"
+	}
+		
+	Physcannon.Dryfire = 
+	{
+		type = "hlvr_default_3d"
+
+		volume = 0.2
+		vsnd_files = "sounds/weapons/physcannon/physcannon_dryfire.vsnd"	
+		attachment = "muzzle"		
+	}
+		
+	Physcannon.Tooheavy = 
+	{
+		type = "hlvr_default_3d"
+
+		volume = 0.2
+		vsnd_files = "sounds/weapons/physcannon/physcannon_tooheavy.vsnd"
+		attachment = "beam"		
+	}
+		
+	Physcannon.ClawsClose = 
+	{
+		type = "hlvr_default_3d"
+		
+		volume = 0.05
+		distance_max = "100"
+		vsnd_files = "sounds/weapons/physcannon/physcannon_claws_close.vsnd"	
+		attachment = "muzzle"		
+	}
+		
+	Physcannon.ClawsOpen = 
+	{
+		type = "hlvr_default_3d"
+		volume = 0.05
+		distance_max = "100"
+		vsnd_files = "sounds/weapons/physcannon/physcannon_claws_open.vsnd"	
+		attachment = "muzzle"
+	}
+/*	
+	Physcannon.Launch = 
+	{
+		type = "hlvr_default_3d"
+		preload_vsnds = true
+		volume = 0.3
+		vsnd_files = "sounds/weapons/physcannon/superphys_launch1.vsnd"	
+		attachment = "muzzle"
+	}
+*/	
+}

@@ -1,0 +1,209 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "prop_data"
+						game_keys = 
+						{
+							base = "Cardboard.Small"
+							allowstatic = false
+							bakelighting = true
+							damage_table = "props"
+							"dmg.bullets" = -1.0
+							"dmg.club" = 0.1
+							"dmg.explosive" = -1.0
+							"dmg.fire" = -1.0
+							health = 7.0
+							spawn_motion_disabled = false
+						}
+					},
+					{
+						_class = "BreakCommand"
+						game_class = "break_create_particle"
+						game_keys = 
+						{
+							name = resource:"particles/impact_fx/impact_paper.vpcf"
+							cp0_model = resource:""
+							cp0_snapshot = resource:""
+							skin_cp = 1
+							damage_position_cp = 2
+							damage_direction_cp = 3
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "grab"
+							pose_special_type = "0"
+							conform_fingers = false
+							allow_flip = true
+							parent_bone = ""
+							origin_left = [ -5.18345, -0.472244, -2.71372 ]
+							angles_left = [ -15.5627, 74.6582, -45.0339 ]
+							origin_right = [ -5.18345, 0.472244, -2.71372 ]
+							angles_right = [ -15.5627, -74.6582, 45.0339 ]
+							max_distance = 0.0
+							finger_thumb = 1.0
+							finger_pinky = 0.558155
+							finger_ring = 0.483922
+							finger_middle = 0.420303
+							finger_index = 0.871516
+							has_extent = true
+							show_extent_helper = false
+							extent_origin_left = [ -1.24906, -0.48616, -2.86807 ]
+							extent_origin_min_left = [ -5.18345, -0.472244, -2.71372 ]
+							extent_origin_right = [ -1.36027, 0.48616, -2.86807 ]
+							extent_origin_min_right = [ -5.18345, 0.472244, -2.71372 ]
+							has_rotation = false
+							rotation_axis0 = [ 0.0, 0.0, 0.0 ]
+							rotation_axis1 = [ 0.0, 1.0, 0.0 ]
+							rotation_min = 0.0
+							rotation_max = 0.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsBodyMarkupList"
+				children = 
+				[
+					{
+						_class = "PhysicsBodyMarkup"
+						target_body = "undefined"
+						mass_override = 0.05
+						inertia_scale = 2.0
+						linear_damping = 0.0
+						angular_damping = 0.0
+						use_mass_center_override = true
+						mass_center_override = [ 0.3, 0.0, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsHullFile"
+						name = "paper_plane1"
+						disabled = true
+						parent_bone = ""
+						surface_prop = "prop.paper"
+						collision_prop = "default"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						filename = "models/props_toys/paper_plane1.fbx"
+						import_scale = 1.0
+						faceMergeAngle = 10.0
+						maxHullVertices = 0
+						import_mode = "SingleHull"
+						optimization_algorithm = "IVR"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "prop.paper"
+						collision_prop = "default"
+						origin = [ -2.152274, 0.002678, 0.223415 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 3.626115, 5.587531, 0.109375 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy"
+						parent_bone = ""
+						surface_prop = "prop.paper"
+						collision_prop = "default"
+						origin = [ 4.563979, 0.0, 0.217556 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 3.693262, 2.174096, 0.097656 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy1"
+						parent_bone = ""
+						surface_prop = "prop.paper"
+						collision_prop = "default"
+						origin = [ -0.899422, 0.036798, -0.111584 ]
+						angles = [ -4.318451, 0.0, 0.0 ]
+						dimensions = [ 6.138103, 0.267924, 0.710302 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy_copy"
+						parent_bone = ""
+						surface_prop = "prop.paper"
+						collision_prop = "default"
+						origin = [ 1.23592, 0.0, 0.246931 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 2.941378, 4.772037, 0.062343 ]
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "lift_directions"
+						parent_bone = ""
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ -7.027466, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						children = 
+						[
+							{
+								_class = "RenderMeshMarkup"
+								material_search_path = "materials/models/props_toys"
+								use_expensive_tangents = false
+								high_high_precision_texcoords = false
+								calc_per_vertex_curvature = false
+								prefer_high_density_tris_in_uv_density_calc = false
+							},
+						]
+						filename = "models/props_toys/paper_plane1.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+	}
+}

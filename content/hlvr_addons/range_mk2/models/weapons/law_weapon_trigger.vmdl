@@ -1,0 +1,200 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "trigger"
+						surface_prop = "prop.plastic"
+						collision_prop = "default"
+						origin = [ 0.054499, 0.124319, -0.512084 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 1.597787, 0.957886, 3.596599 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/weapons/law_weapon_trigger.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "interact"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/law_anims/interact.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "grab"
+							pose_special_type = "0"
+							conform_fingers = true
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ 5.08494, 3.2344, 3.26982 ]
+							angles_left = [ -28.020504, -117.527992, 95.064499 ]
+							origin_right = [ 5.08494, -3.2344, 3.26982 ]
+							angles_right = [ -28.0205, 117.528, -95.0645 ]
+							max_distance = 4.0
+							finger_thumb = 0.323
+							finger_pinky = 0.502
+							finger_ring = 0.442759
+							finger_middle = 0.390689
+							finger_index = 0.431
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.0, -0.0, -2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, 0.0, -2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = true
+							rotation_axis0 = [ 0.0, 0.0, 3.0 ]
+							rotation_axis1 = [ 8.31544, 0.0, 3.0 ]
+							rotation_min = 30.0
+							rotation_max = 30.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "handpose_data"
+						game_keys = 
+						{
+							handpose_bone = ""
+							handpose_model = "custom"
+							allow_procedural_handpose = false
+							global_pose_template = false
+						}
+					},
+					{
+						_class = "GenericGameData"
+						name = "_copy"
+						disabled = true
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "grab"
+							pose_special_type = "0"
+							conform_fingers = true
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ -3.05413, -3.47502, 2.98225 ]
+							angles_left = [ -32.8847, -15.9627, 83.5997 ]
+							origin_right = [ 3.05413, -3.47502, 2.98225 ]
+							angles_right = [ -32.884705, -164.037292, -83.599693 ]
+							max_distance = 4.0
+							finger_thumb = 0.323
+							finger_pinky = 0.502
+							finger_ring = 0.473
+							finger_middle = 0.407
+							finger_index = 0.431
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ -0.0, 0.0, -2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, 0.0, -2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = true
+							rotation_axis0 = [ 0.0, 0.0, 3.0 ]
+							rotation_axis1 = [ 0.0, -5.0, 3.0 ]
+							rotation_min = 30.0
+							rotation_max = 30.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+					{
+						_class = "GenericGameData"
+						name = "_copy1"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "grab"
+							pose_special_type = "0"
+							conform_fingers = true
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ 3.71057, -3.40154, 3.26982 ]
+							angles_left = [ -27.261902, 79.626007, 82.530098 ]
+							origin_right = [ 3.71057, 3.40154, 3.26982 ]
+							angles_right = [ -27.2619, -79.626, -82.5301 ]
+							max_distance = 4.0
+							finger_thumb = 0.323
+							finger_pinky = 0.434931
+							finger_ring = 0.401049
+							finger_middle = 0.366293
+							finger_index = 0.409611
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.0, -0.0, -2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, 0.0, -2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = true
+							rotation_axis0 = [ 0.0, 0.0, 3.0 ]
+							rotation_axis1 = [ 8.31544, 0.0, 3.0 ]
+							rotation_min = 30.0
+							rotation_max = 30.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+				]
+			},
+			{
+				_class = "BoneMarkupList"
+				bone_cull_type = "Leaf Only"
+			},
+		]
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
+		anim_graph_name = ""
+	}
+}

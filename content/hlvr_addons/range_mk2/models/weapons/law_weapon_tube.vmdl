@@ -1,0 +1,159 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "grab"
+							pose_special_type = "0"
+							conform_fingers = false
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ -5.08586, -0.281505, -0.566416 ]
+							angles_left = [ -13.1266, 53.573, -5.51663 ]
+							origin_right = [ -5.20275, 0.185321, -0.566416 ]
+							angles_right = [ -13.1266, -52.0, 5.51663 ]
+							max_distance = 4.0
+							finger_thumb = 0.820819
+							finger_pinky = 0.482982
+							finger_ring = 0.352005
+							finger_middle = 0.288864
+							finger_index = 0.32898
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.213209, 0.085864, -4.68713 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ -0.213209, 0.085864, -4.68713 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = true
+							rotation_axis0 = [ -5.49057, 0.0, 0.0 ]
+							rotation_axis1 = [ 0.0, 0.0, 0.0 ]
+							rotation_min = 180.0
+							rotation_max = 180.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "handpose_data"
+						game_keys = 
+						{
+							handpose_bone = ""
+							handpose_model = "custom"
+							allow_procedural_handpose = false
+							global_pose_template = false
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						disabled = true
+						parent_bone = "extension"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ -0.759649, -0.0, 0.048836 ]
+						angles = [ 0.0, 90.0, 0.0 ]
+						dimensions = [ 2.3, 1.584043, 2.3 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						name = "_copy"
+						parent_bone = "extension"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						radius = 1.35
+						point0 = [ -0.034153, 0.0, 0.0 ]
+						point1 = [ -9.894104, 0.0, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy1"
+						disabled = true
+						parent_bone = "extension"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ -2.33696, -0.016153, 2.123492 ]
+						angles = [ 0.0, 90.0, 0.0 ]
+						dimensions = [ 1.43563, 3.322031, 2.244805 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/weapons/law_weapon_tube.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "extend_interact"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.0
+						fade_out_time = 0.0
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/law_anims/extend_interact.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "BoneMarkupList"
+				children = 
+				[
+					{
+						_class = "BoneMarkup"
+						target_bone = "launcher"
+						ignore_Translation = false
+						ignore_rotation = false
+						do_not_discard = true
+					},
+				]
+				bone_cull_type = "Aggressive"
+			},
+		]
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
+		anim_graph_name = ""
+	}
+}

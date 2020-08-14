@@ -1,0 +1,379 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "body"
+						child_body = "neck1"
+						anchor_origin = [ 0.0, 4.0975, 0.0 ]
+						anchor_angles = [ 0.000007, -5.388743, -90.000031 ]
+						collision_enabled = false
+						friction = 1.2
+						enable_swing_limit = true
+						swing_limit = 24.969999
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -10.93
+						max_twist_angle = 9.88
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "neck1"
+						child_body = "neck2"
+						anchor_origin = [ 0.0, 2.8578, 0.0 ]
+						anchor_angles = [ 0.00001, -0.535622, -90.000031 ]
+						collision_enabled = false
+						friction = 0.8
+						enable_swing_limit = true
+						swing_limit = 24.969999
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -10.41
+						max_twist_angle = 10.92
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "neck2"
+						child_body = "head"
+						anchor_origin = [ 0.0, 2.389505, 0.0 ]
+						anchor_angles = [ -0.0, -10.015067, -90.000046 ]
+						collision_enabled = false
+						friction = 1.5
+						enable_swing_limit = true
+						swing_limit = 25.49
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -10.41
+						max_twist_angle = 11.96
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "thigh_l"
+						child_body = "foot_l"
+						anchor_origin = [ -0.0, 5.190684, 0.0 ]
+						anchor_angles = [ -4.734191, 24.270372, -76.044579 ]
+						collision_enabled = false
+						friction = 0.3
+						enable_swing_limit = true
+						swing_limit = 45.779999
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -15.0
+						max_twist_angle = 15.0
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "thigh_r"
+						child_body = "foot_r"
+						anchor_origin = [ 0.0, 5.137401, -0.0 ]
+						anchor_angles = [ 5.067506, -23.471567, -75.684608 ]
+						collision_enabled = false
+						friction = 0.3
+						enable_swing_limit = true
+						swing_limit = 45.779999
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -15.0
+						max_twist_angle = 15.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "body"
+						child_body = "thigh_l"
+						anchor_origin = [ 0.0, 0.0, 0.0 ]
+						anchor_angles = [ 0.0, -90.0, 0.0 ]
+						collision_enabled = false
+						friction = 1.04
+						enable_limit = true
+						min_angle = -45.799999
+						max_angle = 47.799999
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "body"
+						child_body = "thigh_r"
+						anchor_origin = [ 0.0, 0.0, 0.0 ]
+						anchor_angles = [ 0.0, -90.0, 0.0 ]
+						collision_enabled = false
+						friction = 1.09
+						enable_limit = true
+						min_angle = -45.799999
+						max_angle = 45.700001
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "body"
+						child_body = "pulley"
+						anchor_origin = [ 0.0, 0.0, 0.0 ]
+						anchor_angles = [ 0.0, 90.0, 0.0 ]
+						collision_enabled = false
+						friction = 0.0
+						enable_limit = false
+						min_angle = 0.0
+						max_angle = 0.0
+					},
+					{
+						_class = "PhysicsJointWeld"
+						parent_body = "thigh_r"
+						child_body = "thigh_l"
+						anchor_origin = [ 0.0, 0.0, 0.0 ]
+						anchor_angles = [ 4.70501, 60.4105, 70.233803 ]
+						collision_enabled = false
+						linear_freqeuncy = 0.0
+						linear_damping_ratio = 0.0
+						max_force = 0.0
+						angular_frequency = 0.0
+						angular_damping_ratio = 0.0
+						max_torque = 0.0
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "body"
+						surface_prop = "prop.flesh"
+						collision_prop = "default"
+						radius = 1.0
+						point0 = [ -0.163611, 0.630041, 1.329367 ]
+						point1 = [ 0.286266, 2.94941, 1.144094 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "body"
+						surface_prop = "prop.flesh"
+						collision_prop = "default"
+						radius = 1.0
+						point0 = [ -0.190336, 0.642482, -1.312078 ]
+						point1 = [ 0.18876, 2.949793, -1.09191 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "neck1"
+						surface_prop = "prop.flesh"
+						collision_prop = "default"
+						radius = 0.4
+						point0 = [ 0.049728, -0.124757, -0.000625 ]
+						point1 = [ 0.015504, 2.341309, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "neck2"
+						surface_prop = "prop.flesh"
+						collision_prop = "default"
+						radius = 0.4
+						point0 = [ 0.008731, 0.253437, -0.024296 ]
+						point1 = [ -0.029316, 1.574375, 0.060986 ]
+					},
+					{
+						_class = "PhysicsShapeSphere"
+						parent_bone = "head"
+						surface_prop = "prop.flesh"
+						collision_prop = "default"
+						radius = 0.8
+						center = [ -0.031378, 0.353768, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "thigh_l"
+						surface_prop = "prop.flesh"
+						collision_prop = "default"
+						radius = 1.0
+						point0 = [ 0.657822, 1.975835, -0.576528 ]
+						point1 = [ -0.290014, 4.083581, -0.044695 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "thigh_l"
+						surface_prop = "prop.flesh"
+						collision_prop = "default"
+						radius = 0.7
+						point0 = [ 0.428065, 1.413467, 1.129568 ]
+						point1 = [ -0.851716, 3.725988, 1.482275 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "foot_l"
+						surface_prop = "prop.flesh"
+						collision_prop = "default"
+						radius = 0.3
+						point0 = [ -0.049284, 0.195057, 0.05169 ]
+						point1 = [ -0.063026, 4.775476, -0.144595 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "thigh_r"
+						surface_prop = "prop.flesh"
+						collision_prop = "default"
+						radius = 0.7
+						point0 = [ -0.601161, 1.45048, 1.056402 ]
+						point1 = [ 0.887636, 3.87323, 1.452313 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "thigh_r"
+						surface_prop = "prop.flesh"
+						collision_prop = "default"
+						radius = 1.0
+						point0 = [ -0.790544, 1.916545, -0.48767 ]
+						point1 = [ 0.156499, 4.027742, -0.012233 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "foot_r"
+						surface_prop = "prop.flesh"
+						collision_prop = "default"
+						radius = 0.3
+						point0 = [ -0.062677, 0.198052, 0.089017 ]
+						point1 = [ 0.048388, 4.749964, -0.010883 ]
+					},
+					{
+						_class = "PhysicsHullFile"
+						name = "chicken_pulley"
+						parent_bone = "pulley"
+						surface_prop = "world.wood_solid"
+						collision_prop = "default"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						filename = "models/props_toys/chicken_pulley.dmx"
+						import_scale = 1.0
+						faceMergeAngle = 10.38
+						maxHullVertices = 0
+						import_mode = "HullPerElement"
+						optimization_algorithm = "IVR"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						children = 
+						[
+							{
+								_class = "RenderMeshMarkup"
+								material_search_path = ""
+								use_expensive_tangents = false
+								high_high_precision_texcoords = false
+								calc_per_vertex_curvature = false
+								prefer_high_density_tris_in_uv_density_calc = false
+							},
+						]
+						filename = "models/props_toys/chicken_combined.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						filename = "models/props_toys/chicken_pulley.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "cylinder_idle"
+							pose_special_type = "0"
+							conform_fingers = false
+							allow_flip = true
+							parent_bone = "neck1"
+							origin_left = [ 6.55067, 0.731066, 0.37695 ]
+							angles_left = [ 85.2735, -0.342105, -0.000006 ]
+							origin_right = [ 6.55067, -0.731066, 0.37695 ]
+							angles_right = [ 85.273499, 0.342105, 0.000005 ]
+							max_distance = 3.0
+							finger_thumb = 1.0
+							finger_pinky = 1.0
+							finger_ring = 1.0
+							finger_middle = 1.0
+							finger_index = 1.0
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.0, 0.0, 2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, -0.0, 2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = true
+							rotation_axis0 = [ 10.0, 0.0, 0.0 ]
+							rotation_axis1 = [ 3.0, 0.0, 0.0 ]
+							rotation_min = 180.0
+							rotation_max = -180.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "prop_data"
+						game_keys = 
+						{
+							base = "Flesh.Small"
+							allowstatic = false
+							bakelighting = true
+							damage_table = ""
+							"dmg.bullets" = -1.0
+							"dmg.club" = -1.0
+							"dmg.explosive" = -1.0
+							"dmg.fire" = -1.0
+							health = -1.0
+							spawn_motion_disabled = false
+						}
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "arrow_nock"
+						parent_bone = "body"
+						relative_origin = [ 2.159676, -9.732729, 2.180533 ]
+						relative_angles = [ 0.0, 90.0, -90.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+		]
+		model_archetype = "jointed_physics_model"
+		primary_associated_entity = "prop_ragdoll"
+		anim_graph_name = ""
+	}
+}

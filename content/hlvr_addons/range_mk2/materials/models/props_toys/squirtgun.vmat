@@ -1,0 +1,82 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "vr_simple_liquid.vfx"
+
+	//---- Bubbles ----
+	g_flBubbleDepthFalloff "1.842"
+	g_flBubbleOpacity "0.750"
+	g_flBubbleScale "0.609"
+	g_flBubblesMaximum "0.580"
+	g_flBubblesMinimum "0.145"
+	g_flBubbleSpaceScale "0.530"
+	g_flBubbleSpeed "0.010"
+	g_flBubbleStrength "5.235"
+	g_vBubbleColorInner "[0.000000 0.000000 0.000000 0.000000]"
+	g_vBubbleColorOuter "[1.000000 1.000000 1.000000 0.000000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Lighting ----
+	g_flDirectionalLightmapMinZ "0.050"
+	g_flDirectionalLightmapStrength "1.000"
+
+	//---- Liquid ----
+	g_flBrightenEmptyArea "1.304"
+	g_flFresnelGlassThickness "0.242"
+	g_flLiquidBackFade "1.043"
+	g_flLiquidBackOffset "1.000"
+	g_flLiquidBrightness "1.048"
+	g_flLiquidEmissiveStrength "0.000"
+	g_flLiquidInnerGlow "0.000"
+	g_flLiquidLevelHeight "0.533"
+	g_flLiquidLevelHeightDelta "0.300"
+	g_flLiquidRoughness "0.208"
+	g_flLiquidSharpness "30.000"
+	g_flLiquidSpecularStrength "1.000"
+	g_flLiquidSurfaceSpecularStrength "1.300"
+	g_flLiquidWobbleScale "0.010"
+	g_flLiquidWobbleSpeed "1.000"
+	g_flLiquidWobbleWavelength "1.000"
+	g_flMaskMaximum "1.000"
+	g_flMaskMinimum "0.000"
+	g_flSurfaceTension "0.500"
+	g_flTransmissiveStrength "1.000"
+	g_flWaterLineStrength "0.500"
+	g_vLiquidColor "[0.674510 0.674510 0.674510 0.000000]"
+	g_vLiquidLevelDownwardsMinMidMax "[-0.750 0.300 4.200]"
+	g_vLiquidLevelSidewardsMinMidMax "[-3.500 0.000 3.500]"
+	g_vLiquidLevelUpwardsMinMidMax "[-4.200 -0.300 0.750]"
+	TextureLiquidMask "materials/models/props_toys/squirtgun_mask.png"
+
+	//---- Refraction ----
+	g_flChromaticDispersion "0.188"
+	g_flCubeRefractBrightness "0.833"
+	g_flCubeRefractLiquidTransparency "0.346"
+	g_flCubeRefractTransparency "0.867"
+	g_flRefractRoughnessMultiplier "1.433"
+
+	//---- Simple Material ----
+	TextureColorA "materials/models/props_toys/squirtgun_color.png"
+	TextureMetalnessA "[0.000000 0.000000 0.000000 0.000000]"
+	TextureNormalA "materials/models/props_toys/squirtgun_normal.png"
+	TextureRoughnessA "materials/models/props_toys/squirtgun_rough.png"
+
+	//---- Test Values ----
+	g_flTestAgitation "0.000"
+	g_vTestGravityDir "[0.000 0.000 -1.000]"
+
+	//---- Texture Coordinates ----
+	g_nScaleTexCoordUByModelScaleAxis "0"
+	g_nScaleTexCoordVByModelScaleAxis "0"
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+	g_vTexCoordScrollSpeed "[0.000 0.000]"
+
+	DynamicParams
+	{
+		g_flLiquidLevelHeight "exists(level) ? level : 0.5"
+	}
+}

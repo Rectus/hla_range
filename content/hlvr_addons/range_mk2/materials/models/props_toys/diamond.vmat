@@ -1,0 +1,42 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "vr_simple_liquid.vfx"
+
+	//---- Empty Bottle ----
+	F_NO_LIQUID 1
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Lighting ----
+	g_flDirectionalLightmapMinZ "0.050"
+	g_flDirectionalLightmapStrength "1.000"
+
+	//---- Liquid ----
+	g_flFresnelGlassThickness "0.165"
+	g_flMaskMaximum "1.000"
+	g_flMaskMinimum "0.000"
+	g_flTransmissiveStrength "38.110"
+	TextureLiquidMask "[0.133000 0.133000 0.133000 0.000000]"
+
+	//---- Refraction ----
+	g_flChromaticDispersion "0.470"
+	g_flCubeRefractBrightness "5.000"
+	g_flCubeRefractTransparency "1.000"
+	g_flRefractRoughnessMultiplier "0.314"
+
+	//---- Simple Material ----
+	TextureColorA "[0.227451 0.227451 0.227451 1.000000]"
+	TextureMetalnessA "[0.227000 0.227000 0.227000 0.000000]"
+	TextureNormalA "materials/default/default_normal.tga"
+	TextureRoughnessA "[0.047059 0.043137 0.043137 0.000000]"
+
+	//---- Texture Coordinates ----
+	g_nScaleTexCoordUByModelScaleAxis "0"
+	g_nScaleTexCoordVByModelScaleAxis "0"
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+	g_vTexCoordScrollSpeed "[0.000 0.000]"
+}

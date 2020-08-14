@@ -1,0 +1,501 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "prop_data"
+						game_keys = 
+						{
+							base = "Item.Medium"
+							allowstatic = false
+							bakelighting = true
+							damage_table = ""
+							"dmg.bullets" = -1.0
+							"dmg.club" = -1.0
+							"dmg.explosive" = -1.0
+							"dmg.fire" = -1.0
+							health = -1.0
+							spawn_motion_disabled = false
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "launcher"
+						child_body = "endcap"
+						anchor_origin = [ 0.0, -1.57, -1.33 ]
+						anchor_angles = [ 0.287887, -90.0, -89.999985 ]
+						collision_enabled = true
+						friction = 0.1
+						enable_limit = true
+						min_angle = -90.599998
+						max_angle = 180.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "launcher"
+						child_body = "front_sight"
+						anchor_origin = [ 0.0, 1.96, 21.32 ]
+						anchor_angles = [ 0.0, -90.0, -90.0 ]
+						collision_enabled = false
+						friction = 0.1
+						enable_limit = true
+						min_angle = -91.599998
+						max_angle = 5.2
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "launcher"
+						child_body = "rear_sight"
+						anchor_origin = [ 0.0, 2.92, 1.06 ]
+						anchor_angles = [ 0.0, -90.0, -90.0 ]
+						collision_enabled = false
+						friction = 0.1
+						enable_limit = true
+						min_angle = -91.599998
+						max_angle = 0.0
+					},
+					{
+						_class = "PhysicsJointPrismatic"
+						parent_body = "launcher"
+						child_body = "extension"
+						anchor_origin = [ 0.0, 0.0, 0.0 ]
+						anchor_angles = [ 0.0, 0.0, 0.0 ]
+						collision_enabled = false
+						friction = 0.34
+						enable_limit = true
+						min_offset = 0.0
+						max_offset = 9.2
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "endcap"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 0.010198, 2.085925, 0.073749 ]
+						angles = [ 30.994558, -33.744545, -52.373318 ]
+						dimensions = [ 2.637843, 0.47565, 2.593485 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "front_sight"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 0.0, 1.207529, 0.009055 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 1.0, 3.415059, 0.211771 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "rear_sight"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ -0.018554, 1.259329, 0.068908 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.814826, 3.12684, 0.485045 ]
+					},
+					{
+						_class = "PhysicsHullFile"
+						name = "law_weapon_base"
+						parent_bone = "launcher"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						filename = "models/weapons/law_weapon_base.dmx"
+						import_scale = 1.0
+						faceMergeAngle = 10.0
+						maxHullVertices = 0
+						import_mode = "SingleHull"
+						optimization_algorithm = "QEM"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "PhysicsHullFile"
+						name = "law_weapon_tube"
+						parent_bone = "extension"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						filename = "models/weapons/law_weapon_tube.dmx"
+						import_scale = 1.0
+						faceMergeAngle = 13.08
+						maxHullVertices = 0
+						import_mode = "SingleHull"
+						optimization_algorithm = "IVR"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/weapons/law_weapon_base.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						filename = "models/weapons/law_weapon_details.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsBodyMarkupList"
+				children = 
+				[
+					{
+						_class = "PhysicsBodyMarkup"
+						target_body = "launcher"
+						mass_override = 0.0
+						inertia_scale = 1.0
+						linear_damping = 0.0
+						angular_damping = 0.0
+						use_mass_center_override = false
+						mass_center_override = [ 0.0, 0.0, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "muzzle"
+						parent_bone = "muzzle"
+						relative_origin = [ 0.0, 4.666832, 0.0 ]
+						relative_angles = [ 0.0, 90.0, -90.000008 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "backblast"
+						parent_bone = "launcher"
+						relative_origin = [ 0.0, 0.0, -13.20991 ]
+						relative_angles = [ -90.0, 0.0, -90.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "rocket_spawn"
+						parent_bone = "launcher"
+						relative_origin = [ 0.0, 0.0, 30.218201 ]
+						relative_angles = [ -90.0, -90.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "BoneMarkupList"
+				children = 
+				[
+					{
+						_class = "BoneMarkup"
+						target_bone = "extension"
+						ignore_Translation = false
+						ignore_rotation = false
+						do_not_discard = true
+					},
+				]
+				bone_cull_type = "Aggressive"
+			},
+			{
+				_class = "WeightListList"
+				children = 
+				[
+					{
+						_class = "WeightList"
+						name = "cover"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "sight_cover"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "front_sight"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "front_sight"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "rear_sight"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "rear_sight"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "endcap"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "endcap"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "sights"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "front_sight"
+								weight = 1.0
+							},
+							{
+								bone = "rear_sight"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "endcap_open"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "endcap"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/law_anims/endcap_open.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "extend_cover"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "cover"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/law_anims/extend_cover.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "extended"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/law_anims/extended.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "folded"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/law_anims/folded.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "front_sight_popup"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "front_sight"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/law_anims/front_sight_popup.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "rear_sight_popup"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "rear_sight"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/law_anims/rear_sight_popup.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "sight_popup"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "sights"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/law_anims/sight_popup.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cover_sub"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "cover"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/law_anims/extended.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = "jointed_physics_model"
+		primary_associated_entity = "prop_ragdoll"
+		anim_graph_name = "animgraphs/law_weapon_ragdoll.vanmgrph"
+	}
+}

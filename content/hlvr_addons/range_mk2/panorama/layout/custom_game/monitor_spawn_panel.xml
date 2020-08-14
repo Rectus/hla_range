@@ -1,0 +1,68 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/monitor_text_green.css" />
+	</styles>
+
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/spawn_panel.js" />
+	</scripts>
+
+	<ClientUIDialogPanel class="Display">
+		<Panel class="Page Visible">
+
+			<Panel class="Window SpaceBottom">
+				<Label class="WindowTitle" text="Spawn Tools" />
+				<Panel class="WindowBorder">
+
+					<Button class="TextButton" onactivate="SpawnItem('weapon_law')">
+						<Label class="Text" text="M72 LAW" />
+					</Button>
+
+					<Button class="TextButton" onactivate="SpawnItem('weapon_bow')">
+						<Label class="Text" text="Recurve Bow" />
+					</Button>
+
+					<Button class="TextButton" onactivate="SpawnItem('weapon_bow_arrow')">
+						<Label class="Text" text="Arrow" />
+					</Button>
+
+					<Button class="TextButton" onactivate="SpawnItem('tool_gravity_gun')">
+						<Label class="Text" text="Gravity Gun" />
+					</Button>
+
+					<Button class="TextButton" onactivate="SpawnItem('weapon_squirt_gun')">
+						<Label class="Text" text="Squirt Gun" />
+					</Button>
+					
+					
+					<Button class="TextButton" onactivate="SpawnItem('prop_rubber_chicken')">
+						<Label class="Text" text="Rubber Chicken" />
+					</Button>
+					
+					<Button class="TextButton" onactivate="SpawnItem('prop_paper_plane')">
+						<Label class="Text" text="Paper Plane" />
+					</Button>
+					
+					<Button class="TextButton" onactivate="SpawnItem('prop_diamond')">
+						<Label class="Text" text="Diamond" />
+					</Button>
+				</Panel>
+			</Panel>
+
+			<Panel class="Window">
+				<Label class="WindowTitle" text="Spawn Enemies" />
+				<Panel class="WindowBorder">
+
+					<Button class="TextButton" onactivate="SpawnEnemy('combine_squad')">
+						<Label class="Text" text="Combine Squad" />
+					</Button>
+
+					<Button class="TextButton" onactivate="SpawnEnemy('antlion_squad')">
+						<Label class="Text" text="Antlions" />
+					</Button>
+
+				</Panel>
+			</Panel>
+		</Panel>
+	</ClientUIDialogPanel>
+</root>
