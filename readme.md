@@ -3,6 +3,9 @@ These are most of the source files for the Half-Life:Alyx version of the Scripte
 The add-on itself is available here:
 * https://steamcommunity.com/sharedfiles/filedetails/?id=2196297523
 
+Files that can't be included on GitHub:
+* https://drive.google.com/file/d/16f9EWQtw74p9QCHoDrJfHVQSSZju45NO/view?usp=sharing
+
 
 Copyright 2020 Rectus
 
