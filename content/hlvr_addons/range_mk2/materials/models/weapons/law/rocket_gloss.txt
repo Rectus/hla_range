@@ -1,5 +1,0 @@
-"settings"
-{
-	"maxres"		"1024"
-	"brightness"		"1.500000"
-}

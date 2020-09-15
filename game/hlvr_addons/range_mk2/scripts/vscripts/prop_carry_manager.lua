@@ -9,11 +9,14 @@ local PHYS_ENTITIES = {
 	prop_ragdoll_override = true;
 	item_hlvr_grenade_frag = true;
 	item_healthvial = true;
+	
 }
 
 local APPROX_ENTITIES = {
 	prop_ragdoll = true;
 	prop_ragdoll_override = true;
+	item_hlvr_clip_shotgun_single = true;
+	item_hlvr_clip_shotgun_shellgroup = true;
 }
 
 local debugEnabled = false
@@ -81,6 +84,20 @@ function GetPropInHand(player, hand)
 end
 
 
+function GetAllHeldProps()
+
+	local props = {}
+
+	for player, hands in pairs(playerList) do
+		for _, prop in pairs(hands) do
+			table.insert(props, prop)
+		end
+	end
+	
+	return props
+end
+
+
 
 function Activate(aType)
 
@@ -94,6 +111,7 @@ function Activate(aType)
 	_G.g_PropCarryManager.GetPlayerHoldingProp = function(prop) return GetPlayerHoldingProp(prop) end
 	_G.g_PropCarryManager.IsPropCarried = function(prop) return IsPropCarried(prop) end
 	_G.g_PropCarryManager.GetPropInHand = function(player, hand) return GetPropInHand(player, hand) end
+	_G.g_PropCarryManager.GetAllHeldProps = function(player, hand) return GetAllHeldProps() end
 
 
 	Convars:RegisterCommand("prop_carry_debug", ToggleDebug, "Toggle debug display of the custom prop carry manager.", 0)

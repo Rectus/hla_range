@@ -10,13 +10,11 @@
 	<ClientUIDialogPanel class="Display">
 		<Panel class="Page Visible">
 
-			<Panel class="Window SpaceBottom">
+			<Panel class="Window SpaceBottom" style="height: fill-parent-flow( 2 );">
 				<Label class="WindowTitle" text="Spawn Tools" />
 				<Panel class="WindowBorder">
 
-					<Button class="TextButton" onactivate="SpawnItem('weapon_law')">
-						<Label class="Text" text="M72 LAW" />
-					</Button>
+					
 
 					<Button class="TextButton" onactivate="SpawnItem('weapon_bow')">
 						<Label class="Text" text="Recurve Bow" />
@@ -25,9 +23,21 @@
 					<Button class="TextButton" onactivate="SpawnItem('weapon_bow_arrow')">
 						<Label class="Text" text="Arrow" />
 					</Button>
+					
+					<Button class="TextButton" onactivate="SpawnItem('weapon_law')">
+						<Label class="Text" text="M72 LAW" />
+					</Button>
 
 					<Button class="TextButton" onactivate="SpawnItem('tool_gravity_gun')">
 						<Label class="Text" text="Gravity Gun" />
+					</Button>
+					
+					<Button class="TextButton" onactivate="SpawnItem('weapon_pipe_shotgun')">
+						<Label class="Text" text="Pipe Shotgun" />
+					</Button>
+					
+					<Button class="TextButton" onactivate="SpawnItem('weapon_shotgun_shell_box')">
+						<Label class="Text" text="Shotgun Shells" />
 					</Button>
 
 					<Button class="TextButton" onactivate="SpawnItem('weapon_squirt_gun')">
@@ -45,6 +55,18 @@
 					
 					<Button class="TextButton" onactivate="SpawnItem('prop_diamond')">
 						<Label class="Text" text="Diamond" />
+					</Button>
+							
+					<Button class="TextButton" onactivate="SpawnItem('prop_umbrella_ragdoll')">
+						<Label class="Text" text="Broken Umbrella" />
+					</Button>
+
+					<Button class="TextButton" onactivate="SpawnItem('prop_umbrella')">
+						<Label class="Text" text="Working Umbrella" />
+					</Button>
+
+					<Button class="TextButton" onactivate="SpawnItem('headcrab')">
+						<Label class="Text" text="Floor Chicken" />
 					</Button>
 				</Panel>
 			</Panel>

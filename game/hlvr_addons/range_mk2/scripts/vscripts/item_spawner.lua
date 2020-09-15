@@ -65,6 +65,44 @@ local items =
 		model = "models/props_toys/diamond_brilliant.vmdl";
 		targetname = "diamond";
 	};
+	
+	weapon_pipe_shotgun =
+	{
+		classname = "prop_physics";
+		vscripts = "weapon_pipe_shotgun";
+		model = "models/weapons/pipe_shotgun/pipe_shotgun_base.vmdl";
+		targetname = "pipe_shotgun";
+	};
+	
+	weapon_shotgun_shell_box =
+	{
+		classname = "prop_ragdoll";
+		vscripts = "prop_shell_box";
+		model = "models/weapons/pipe_shotgun/shell_box.vmdl";
+		targetname = "diamond";
+	};
+	
+	prop_umbrella_ragdoll =
+	{
+		classname = "prop_ragdoll";
+		model = "models/props_toys/umbrella_new.vmdl";
+		targetname = "umbrella";
+	};
+	
+	prop_umbrella =
+	{
+		classname = "prop_physics";
+		vscripts = "prop_umbrella";
+		model = "models/props_toys/umbrella_base.vmdl";
+		targetname = "umbrella";
+	};
+	
+	headcrab =
+	{
+		classname = "npc_headcrab";
+		vscripts = "headcrab_ragdoll";
+		targetname = "floor_chicken";
+	};
 }
 
 

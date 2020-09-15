@@ -1,5 +1,39 @@
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 {
+	Custom_Weapon.Pipe_Shotgun_Slide_Loop =
+	{
+		type = "hlvr_update_animinteractable"
+		volume = 0.800000
+		pitch = 1.10000
+		remap_code_vol_x1 = 0.0
+		remap_code_vol_y1 = 0.2
+		remap_code_vol_x2 = 0.5
+		remap_code_vol_y2 = 0.4
+		remap_code_vol_x3 = 0.8
+		remap_code_vol_y3 = 0.9
+		remap_code_vol_x4 = 1.000000
+		remap_code_vol_y4 = 1.000000
+		//remap_code_pitch_x1 = 0.5
+		//remap_code_pitch_y1 = 0.9
+		//remap_code_pitch_x2 = 0.33
+		//remap_code_pitch_y2 = 1.0
+		//remap_code_pitch_x3 = 0.66
+		//remap_code_pitch_y3 = 1.1
+		//remap_code_pitch_x4 = 1.0
+		//remap_code_pitch_y4 = 1.2
+		remap_code_vol_limiter = 1.500000
+		//remap_code_pitch_limiter = 1.500000
+		//volume_fade_out = 0.0015
+		mixgroup = "AnimInteract"
+		occlusion_scale = 0.500000
+		//volume_falloff_max = 600.000000
+		vsnd_files = 
+		[
+			"sounds/physics/legacy/metal/metal_grenade_scrape_smooth_loop1.vsnd",
+		]
+	}
+
+
 	Custom_Weapon.Bow_String =
 	{
 		type = "hlvr_default_3d"

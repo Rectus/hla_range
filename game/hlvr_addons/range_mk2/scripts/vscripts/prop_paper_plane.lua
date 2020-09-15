@@ -24,9 +24,10 @@
 ]]--
 
 
-local INTERVAL = FrameTime() * 2
+local INTERVAL = FrameTime() * 4
 local LIFT_FACTOR = 10
 local LIFT_TORQUE_FACTOR = 0.4
+local WING_DRAG_TORQUE_FACTOR = 0.25
 local YAW_AXIS = Vector(0,0,1)
 local PITCH_AXIS = Vector(0,-1,0)
 local ROLL_AXIS = Vector(1,0,0)
@@ -72,9 +73,15 @@ function Think()
 
 	local slowDampingFactor = 0.01 --Lerp(abs(normAngVel:Dot(PITCH_AXIS)), Lerp(abs(normAngVel:Dot(YAW_AXIS)), 0.01, 0.015), 0.1)
 	local fastDampingFactor = Lerp(abs(normAngVel:Dot(PITCH_AXIS)), Lerp(abs(normAngVel:Dot(YAW_AXIS)), 0.02, 0.1), 0.05)
-	local dampingFactor = Lerp(Clamp(speed / 200, 0, 1), slowDampingFactor, fastDampingFactor)
+	local dampingFactor = Lerp(Clamp(speed / 200, 0, 1), slowDampingFactor, fastDampingFactor) * INTERVAL * 100
+	
+	
+	local dragOrigin = thisEntity:GetAttachmentOrigin(thisEntity:ScriptLookupAttachment("wing_drag_center"))
+	
+	local pivotOffsetVec = dragOrigin - thisEntity:GetCenter()
+	local rotAngVel = inVel:Cross(pivotOffsetVec) * WING_DRAG_TORQUE_FACTOR * INTERVAL
 
-	SetPhysAngularVelocity(thisEntity, VectorLerp(dampingFactor, inAngVel,  Vector(0,0,0)))
+	SetPhysAngularVelocity(thisEntity, VectorLerp(dampingFactor, inAngVel,  Vector(0,0,0)) + rotAngVel)
 
 	thisEntity:ApplyAbsVelocityImpulse(liftDir * impulseMagnitude - dragLossVec)
 	thisEntity:ApplyLocalAngularVelocityImpulse(PITCH_AXIS * abs(impulseMagnitude) * LIFT_TORQUE_FACTOR)

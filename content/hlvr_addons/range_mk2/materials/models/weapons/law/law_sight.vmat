@@ -8,17 +8,17 @@ Layer0
 	F_SPECULAR 1
 
 	//---- Translucent ----
-	F_TRANSLUCENT 1
+	F_ALPHA_TEST 1
 
 	//---- Ambient Occlusion ----
 	g_flAmbientOcclusionDirectDiffuse "0.000"
 	g_flAmbientOcclusionDirectSpecular "0.000"
-	TextureAmbientOcclusion "materials/models/weapons/law/launcher_ao.tga"
+	TextureAmbientOcclusion "materials/models/weapons/law/launcher_ao.png"
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "materials/models/weapons/law/launcher_color.tga"
+	TextureColor "materials/models/weapons/law/launcher_color.png"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -34,10 +34,10 @@ Layer0
 	g_flMetalness "0.000"
 
 	//---- Normal ----
-	TextureNormal "materials/models/weapons/law/launcher_normal.tga"
+	TextureNormal "materials/models/weapons/law/launcher_normal.png"
 
 	//---- Roughness ----
-	TextureRoughness "materials/models/weapons/law/launcher_rough.tga"
+	TextureRoughness "materials/models/weapons/law/launcher_rough.png"
 
 	//---- Texture Coordinates ----
 	g_nScaleTexCoordUByModelScaleAxis "0"
@@ -47,7 +47,8 @@ Layer0
 	g_vTexCoordScrollSpeed "[0.000 0.000]"
 
 	//---- Translucent ----
-	g_flOpacityScale "1.000"
+	g_flAlphaTestReference "0.550"
+	g_flAntiAliasedEdgeStrength "0.194"
 	TextureTranslucency "materials/models/weapons/law/launcher_sight_trans.png"
 
 	SystemAttributes

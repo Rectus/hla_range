@@ -1,0 +1,180 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "BoneMarkupList"
+				bone_cull_type = "Leaf Only"
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "prop_data"
+						game_keys = 
+						{
+							base = ""
+							allowstatic = false
+							bakelighting = true
+							damage_table = ""
+							"dmg.bullets" = -1.0
+							"dmg.club" = -1.0
+							"dmg.explosive" = -1.0
+							"dmg.fire" = -1.0
+							health = -1.0
+							spawn_motion_disabled = false
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCapsule"
+						name = "shaft"
+						parent_bone = "handle"
+						surface_prop = "prop.metal_tin"
+						collision_prop = "default"
+						radius = 0.2
+						point0 = [ 5.87165, 0.0, 0.0 ]
+						point1 = [ 36.390598, 0.0, 0.0 ]
+					},
+					{
+						_class = "Folder"
+						name = "handle"
+						children = 
+						[
+							{
+								_class = "PhysicsShapeCapsule"
+								name = "_copy"
+								parent_bone = "handle"
+								surface_prop = "prop.plastic"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ -0.217235, 0.0, 0.0 ]
+								point1 = [ 5.81722, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								name = "_copy_copy"
+								parent_bone = "handle"
+								surface_prop = "prop.plastic"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ -1.73728, 0.0, -1.07498 ]
+								point1 = [ -0.435875, 0.0, -0.044242 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								name = "_copy_copy_copy"
+								parent_bone = "handle"
+								surface_prop = "prop.plastic"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ -1.58557, 0.0, -2.80501 ]
+								point1 = [ -1.87714, 0.0, -1.47029 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								name = "_copy_copy_copy_copy"
+								parent_bone = "handle"
+								surface_prop = "prop.plastic"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ -0.318881, 0.0, -3.71644 ]
+								point1 = [ -1.48083, 0.0, -3.01107 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								name = "_copy_copy_copy_copy_copy"
+								parent_bone = "handle"
+								surface_prop = "prop.plastic"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ 2.15855, 0.0, -3.08911 ]
+								point1 = [ -0.035331, 0.0, -3.80141 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "grip"
+						parent_bone = "grip"
+						relative_origin = [ 0.0, 1.099501, 0.0 ]
+						relative_angles = [ -0.0, 0.0, -0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "grip_max"
+						parent_bone = "handle"
+						relative_origin = [ 0.0, 28.422602, -0.0 ]
+						relative_angles = [ -0.0, 0.0, -0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "grip_min"
+						parent_bone = "handle"
+						relative_origin = [ 0.0, 7.717913, 0.0 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "umbrella_base"
+						children = 
+						[
+							{
+								_class = "RenderMeshMarkup"
+								material_search_path = "materials/models/props_toys"
+								use_expensive_tangents = false
+								high_high_precision_texcoords = false
+								calc_per_vertex_curvature = false
+								prefer_high_density_tris_in_uv_density_calc = false
+							},
+						]
+						filename = "models/props_toys/umbrella_base.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = "physics_prop_model"
+		primary_associated_entity = "prop_physics"
+		anim_graph_name = ""
+		importer_notes = """
+Imported from VMDL
+==Warnings==
+Failed to apply 'fps' option to non-anim-file: 'pose'
+
+"""
+	}
+}

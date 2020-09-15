@@ -1,0 +1,1658 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "IKData"
+				children = 
+				[
+					{
+						_class = "IKRigSimple"
+						children = 
+						[
+							{
+								_class = "IKChainOld"
+								name = "ik_frame_1"
+								children = 
+								[
+									{
+										_class = "IKRuleFollowAnimation"
+									},
+								]
+								end_effector_bone = "frame1_4"
+								root_bone = "frame1_1"
+								end_effector_target_bone = ""
+								reverse_footlock_bone = ""
+								max_lock_distance_to_target = 6.0
+								footstep_footstep_sound_type = "Left"
+								footstep_sound = ""
+								footstep_attachment = ""
+								solver = "IKSOLVER_Fabrik"
+								hyperextension_release_dot_threshold = 0.937995
+								use_target_instead_of_lock_threshold = 0.01
+								break_restoration_time = 0.15
+								soften_time = 0.5
+								soften_percentage = 0.1
+							},
+						]
+						disabled = true
+						initial_master_blend_amount = 1.0
+						abs_origin_drop_height = 24.0
+						abs_origin_drop_height_spring_strength = 500.0
+						default_tilt_spring_strength = 5.0
+						tilt_bone = ""
+						animgraph_master_blend_parameter_name = ""
+						system = "IKSYSTEMTYPE_SkeletonInstance"
+					},
+				]
+			},
+			{
+				_class = "BoneMarkupList"
+				bone_cull_type = "None"
+			},
+			{
+				_class = "ClothProxyMeshList"
+				children = 
+				[
+					{
+						_class = "ClothProxyMeshFile"
+						name = "umbrella1"
+						filename = "models/props_toys/umbrella.dmx"
+						import_scale = 1.0
+						back_solve_joints = false
+						back_solve_joints_drive_meshes = false
+						flex_cloth_borders = false
+						add_bones_to_render_mesh = true
+						back_solve_influence_threshold = 0.05
+						cloth_friction_bias = 0.0
+						cloth_friction_scale = 1.0
+						envelope_inches = 1000.0
+						cloth_goal_strength_bias = 0.292
+						cloth_goal_strength_scale = 1.0
+						cloth_drag_scale = 1.0
+						cloth_mass_scale = 0.539
+						cloth_gravity_scale = 1.0
+						cloth_collision_radius_scale = 1.0
+						cloth_ground_collision_scale = 1.0
+						cloth_ground_friction_scale = 1.0
+						cloth_use_rods_scale = 1.0
+						cloth_make_rods_scale = 1.0
+						cloth_anchor_free_rotate_scale = 1.0
+						cloth_volumetric_scale = 1.0
+						cloth_suspenders_scale = 1.0
+						cloth_bend_stiffness_scale = 1.0
+						cloth_stray_radius_inv_scale = 1.0
+						cloth_stray_radius_scale = 1.0
+						cloth_stray_radius_stretchiness_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "ClothParams"
+						default_stretch = 0.106
+						additional_shear_stretch = 0.101
+						extra_iterations = 1
+						extra_goal_iterations = 0
+						extra_pressure_iterations = 0
+						goal_strength_bias = 0.0
+						default_gravity_scale = 1.0
+						default_vel_air_drag = 0.106
+						default_exp_air_drag = 0.157
+						velocity_smooth_rate = 0.0
+						internal_pressure = 0.0
+						windage = 0.05
+						wind_drag = 0.033
+						velocity_smooth_iterations = 0
+						default_ground_friction = 0.073
+						default_world_collision_penetration = 0.0
+						add_world_collision_radius = 0.056
+						local_force = 1.0
+						local_rotation = 0.0
+						volumetric_solve_amount = 0.0
+						add_curvature = 0.0
+						quad_bend_tolerance = 0.05
+						follow_the_lead = false
+						use_per_node_local_force_and_rotation = false
+						uninertial_rods = false
+						explicit_masses = false
+						unitless_damping = true
+						force_world_collision_on_all_nodes = false
+						new_style = true
+						can_collide_with_world_hulls = true
+						can_collide_with_world_meshes = true
+						can_collide_with_world_capsule_and_spheres = true
+						add_stiffness_rods = true
+						rigid_edge_hinges = false
+						soft_skin_animation = false
+						add_bend_only_rods = false
+						immovable = false
+					},
+				]
+			},
+			{
+				_class = "PoseParamList"
+				children = 
+				[
+					{
+						_class = "PoseParam"
+						name = "open"
+						poseparam_min = 0.0
+						poseparam_max = 1.0
+						poseparam_looping = false
+						poseparam_loop = 0.0
+					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "prop_data"
+						game_keys = 
+						{
+							base = ""
+							allowstatic = false
+							bakelighting = true
+							damage_table = ""
+							"dmg.bullets" = -1.0
+							"dmg.club" = -1.0
+							"dmg.explosive" = -1.0
+							"dmg.fire" = -1.0
+							health = -1.0
+							spawn_motion_disabled = false
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "handle"
+						child_body = "frame1_1"
+						anchor_origin = [ 0.0, 33.207901, 0.246196 ]
+						anchor_angles = [ 85.311798, 90.0, -90.0 ]
+						collision_enabled = false
+						friction = 0.81
+						enable_limit = true
+						min_angle = -90.0
+						max_angle = 0.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "handle"
+						child_body = "frame2_1"
+						anchor_origin = [ -0.174088, 33.207901, 0.174086 ]
+						anchor_angles = [ -44.808601, -173.384995, -4.67259 ]
+						collision_enabled = false
+						friction = 0.81
+						enable_limit = true
+						min_angle = 0.0
+						max_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "handle"
+						child_body = "frame3_1"
+						anchor_origin = [ -0.246198, 33.207901, -0.000001 ]
+						anchor_angles = [ -0.0, -175.311996, -0.000001 ]
+						collision_enabled = false
+						friction = 0.81
+						enable_limit = true
+						min_angle = 0.0
+						max_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "handle"
+						child_body = "frame4_1"
+						anchor_origin = [ -0.174088, 33.207901, -0.174089 ]
+						anchor_angles = [ 44.808601, -173.384995, 4.67259 ]
+						collision_enabled = false
+						friction = 0.81
+						enable_limit = true
+						min_angle = 0.0
+						max_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "handle"
+						child_body = "frame5_1"
+						anchor_origin = [ 0.0, 33.207901, -0.246198 ]
+						anchor_angles = [ -85.311798, 90.0, 90.0 ]
+						collision_enabled = false
+						friction = 0.81
+						enable_limit = true
+						min_angle = -90.0
+						max_angle = 0.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "handle"
+						child_body = "frame6_1"
+						anchor_origin = [ 0.174088, 33.207901, -0.174089 ]
+						anchor_angles = [ -44.808601, 173.384995, 4.67259 ]
+						collision_enabled = false
+						friction = 0.81
+						enable_limit = true
+						min_angle = -90.0
+						max_angle = 0.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "handle"
+						child_body = "frame7_1"
+						anchor_origin = [ 0.246198, 33.207901, -0.000001 ]
+						anchor_angles = [ 0.0, 175.311996, -0.000001 ]
+						collision_enabled = false
+						friction = 0.81
+						enable_limit = true
+						min_angle = -90.0
+						max_angle = 0.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "handle"
+						child_body = "frame8_1"
+						anchor_origin = [ 0.174088, 33.207901, 0.174086 ]
+						anchor_angles = [ 44.808601, 173.384995, -4.6726 ]
+						collision_enabled = false
+						friction = 0.81
+						enable_limit = true
+						min_angle = -90.0
+						max_angle = 0.0
+					},
+					{
+						_class = "PhysicsJointPrismatic"
+						parent_body = "handle"
+						child_body = "grip"
+						anchor_origin = [ 0.0, 27.218, -0.000002 ]
+						anchor_angles = [ 0.0, 0.0, -90.0 ]
+						collision_enabled = false
+						friction = 1.35
+						enable_limit = true
+						min_offset = -24.0
+						max_offset = 4.0
+					},
+					{
+						_class = "PhysicsJointWeld"
+						disabled = true
+						parent_body = "!fixed"
+						child_body = "handle"
+						anchor_origin = [ 0.0, 0.0, 0.0 ]
+						anchor_angles = [ 0.0, 0.0, 0.0 ]
+						collision_enabled = false
+						linear_freqeuncy = 0.0
+						linear_damping_ratio = 0.0
+						max_force = 0.0
+						angular_frequency = 0.0
+						angular_damping_ratio = 0.0
+						max_torque = 0.0
+					},
+					{
+						_class = "Folder"
+						name = "pole_flex"
+						children = 
+						[
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame1_1"
+								child_body = "frame1_2"
+								anchor_origin = [ 0.0, 4.50467, -0.000008 ]
+								anchor_angles = [ -2.59755, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame4_2"
+								child_body = "frame4_3"
+								anchor_origin = [ 0.000001, 6.98274, 0.0 ]
+								anchor_angles = [ -9.86881, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame6_2"
+								child_body = "frame6_3"
+								anchor_origin = [ -0.000001, 6.98274, 0.0 ]
+								anchor_angles = [ 9.86881, 90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame3_1"
+								child_body = "frame3_2"
+								anchor_origin = [ 0.000001, 4.50468, -0.000004 ]
+								anchor_angles = [ -2.59755, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame7_3"
+								child_body = "frame7_4"
+								anchor_origin = [ -0.000002, 8.05435, 0.0 ]
+								anchor_angles = [ 17.328501, 90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame2_3"
+								child_body = "frame2_4"
+								anchor_origin = [ -0.0, 8.05436, 0.0 ]
+								anchor_angles = [ 17.328501, 90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame4_1"
+								child_body = "frame4_2"
+								anchor_origin = [ 0.000001, 4.50468, -0.000008 ]
+								anchor_angles = [ -2.59754, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame3_3"
+								child_body = "frame3_4"
+								anchor_origin = [ 0.000002, 8.05435, 0.0 ]
+								anchor_angles = [ -17.328501, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame8_1"
+								child_body = "frame8_2"
+								anchor_origin = [ -0.0, 4.50468, -0.000004 ]
+								anchor_angles = [ 2.59755, 90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame1_2"
+								child_body = "frame1_3"
+								anchor_origin = [ 0.0, 6.98274, 0.0 ]
+								anchor_angles = [ -9.86882, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame2_2"
+								child_body = "frame2_3"
+								anchor_origin = [ -0.000001, 6.98274, 0.000004 ]
+								anchor_angles = [ 9.86882, 90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame8_3"
+								child_body = "frame8_4"
+								anchor_origin = [ 0.0, 8.05436, 0.0 ]
+								anchor_angles = [ -17.328501, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame5_3"
+								child_body = "frame5_4"
+								anchor_origin = [ 0.0, 8.05436, -0.000004 ]
+								anchor_angles = [ -17.328501, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame3_2"
+								child_body = "frame3_3"
+								anchor_origin = [ 0.000002, 6.98274, -0.000008 ]
+								anchor_angles = [ -9.86882, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame7_1"
+								child_body = "frame7_2"
+								anchor_origin = [ -0.000001, 4.50468, -0.000004 ]
+								anchor_angles = [ 2.59755, 90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame4_3"
+								child_body = "frame4_4"
+								anchor_origin = [ 0.000001, 8.05435, 0.0 ]
+								anchor_angles = [ -17.328501, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame6_3"
+								child_body = "frame6_4"
+								anchor_origin = [ -0.000001, 8.05435, 0.0 ]
+								anchor_angles = [ 17.328501, 90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame2_1"
+								child_body = "frame2_2"
+								anchor_origin = [ 0.000001, 4.50468, 0.0 ]
+								anchor_angles = [ -2.59755, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame5_2"
+								child_body = "frame5_3"
+								anchor_origin = [ -0.0, 6.98274, -0.000004 ]
+								anchor_angles = [ 9.86881, 90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame1_3"
+								child_body = "frame1_4"
+								anchor_origin = [ 0.0, 8.05435, -0.000004 ]
+								anchor_angles = [ -17.3286, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame7_2"
+								child_body = "frame7_3"
+								anchor_origin = [ -0.000002, 6.98274, -0.000008 ]
+								anchor_angles = [ 9.86882, 90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame8_2"
+								child_body = "frame8_3"
+								anchor_origin = [ 0.0, 6.98274, 0.0 ]
+								anchor_angles = [ -9.86882, -90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame6_1"
+								child_body = "frame6_2"
+								anchor_origin = [ -0.000001, 4.50468, -0.000008 ]
+								anchor_angles = [ 2.59754, 90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame5_1"
+								child_body = "frame5_2"
+								anchor_origin = [ -0.0, 4.50468, -0.000004 ]
+								anchor_angles = [ 2.59754, 90.0, -90.0 ]
+								collision_enabled = false
+								linear_freqeuncy = 0.0
+								linear_damping_ratio = 0.0
+								max_force = 0.0
+								angular_frequency = 18.58
+								angular_damping_ratio = 0.923
+								max_torque = 0.0
+							},
+						]
+					},
+					{
+						_class = "Folder"
+						name = "supports"
+						children = 
+						[
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "frame1_2"
+								child_body = "frame1_support"
+								anchor_origin = [ 0.0, 6.98273, 0.0 ]
+								anchor_angles = [ -20.2446, 90.0, 89.999901 ]
+								collision_enabled = false
+								friction = 0.16
+								enable_limit = true
+								min_angle = -160.0
+								max_angle = 30.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "frame2_2"
+								child_body = "frame2_support"
+								anchor_origin = [ -0.000001, 6.98274, 0.000004 ]
+								anchor_angles = [ 0.0, -90.0, -90.0 ]
+								collision_enabled = false
+								friction = 0.16
+								enable_limit = true
+								min_angle = -160.0
+								max_angle = 30.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "frame3_2"
+								child_body = "frame3_support"
+								anchor_origin = [ 0.000002, 6.98274, -0.000008 ]
+								anchor_angles = [ -20.2446, 90.0, -89.739197 ]
+								collision_enabled = false
+								friction = 0.16
+								enable_limit = true
+								min_angle = -160.0
+								max_angle = 30.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "frame4_2"
+								child_body = "frame4_support"
+								anchor_origin = [ 0.000001, 6.98274, 0.0 ]
+								anchor_angles = [ 0.0, 90.0, -90.0 ]
+								collision_enabled = false
+								friction = 0.16
+								enable_limit = true
+								min_angle = -160.0
+								max_angle = 30.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "frame5_2"
+								child_body = "frame5_support"
+								anchor_origin = [ -0.0, 6.98274, -0.000004 ]
+								anchor_angles = [ 20.2446, -90.0, 90.0 ]
+								collision_enabled = false
+								friction = 0.16
+								enable_limit = true
+								min_angle = -160.0
+								max_angle = 30.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "frame6_2"
+								child_body = "frame6_support"
+								anchor_origin = [ -0.000001, 6.98274, 0.0 ]
+								anchor_angles = [ 20.244499, -90.0, -90.0 ]
+								collision_enabled = false
+								friction = 0.16
+								enable_limit = true
+								min_angle = -160.0
+								max_angle = 30.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "frame7_2"
+								child_body = "frame7_support"
+								anchor_origin = [ -0.000002, 6.98274, -0.000008 ]
+								anchor_angles = [ 20.2446, -90.0, -89.739197 ]
+								collision_enabled = false
+								friction = 0.16
+								enable_limit = true
+								min_angle = -160.0
+								max_angle = 30.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "frame8_2"
+								child_body = "frame8_support"
+								anchor_origin = [ 0.000001, 6.98274, 0.0 ]
+								anchor_angles = [ -20.244499, 90.000099, -90.0 ]
+								collision_enabled = false
+								friction = 0.16
+								enable_limit = true
+								min_angle = -160.0
+								max_angle = 30.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "grip"
+								child_body = "frame2_support"
+								anchor_origin = [ -0.31469, 2.0521, 0.315892 ]
+								anchor_angles = [ 45.0, 0.0, 0.0 ]
+								collision_enabled = false
+								friction = 0.1
+								enable_limit = true
+								min_angle = -80.0
+								max_angle = 100.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "grip"
+								child_body = "frame1_support"
+								anchor_origin = [ 0.0, 2.0521, 0.440596 ]
+								anchor_angles = [ 90.0, 0.0, 0.0 ]
+								collision_enabled = false
+								friction = 0.1
+								enable_limit = true
+								min_angle = -80.0
+								max_angle = 100.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "grip"
+								child_body = "frame3_support"
+								anchor_origin = [ -0.384008, 2.05209, 0.0 ]
+								anchor_angles = [ 0.0, 0.0, 0.0 ]
+								collision_enabled = false
+								friction = 0.1
+								enable_limit = true
+								min_angle = -80.0
+								max_angle = 100.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "grip"
+								child_body = "frame4_support"
+								anchor_origin = [ -0.308741, 2.05208, -0.30816 ]
+								anchor_angles = [ -45.0, 0.0, 0.0 ]
+								collision_enabled = false
+								friction = 0.1
+								enable_limit = true
+								min_angle = -80.0
+								max_angle = 100.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "grip"
+								child_body = "frame5_support"
+								anchor_origin = [ 0.0, 2.05208, -0.457402 ]
+								anchor_angles = [ -90.0, 0.0, 0.0 ]
+								collision_enabled = false
+								friction = 0.1
+								enable_limit = true
+								min_angle = -80.0
+								max_angle = 100.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "grip"
+								child_body = "frame6_support"
+								anchor_origin = [ 0.31438, 2.05208, -0.322733 ]
+								anchor_angles = [ -135.0, 0.0, 0.0 ]
+								collision_enabled = false
+								friction = 0.1
+								enable_limit = true
+								min_angle = -80.0
+								max_angle = 100.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "grip"
+								child_body = "frame7_support"
+								anchor_origin = [ 0.45615, 2.05209, 0.0 ]
+								anchor_angles = [ 180.0, 0.0, 0.0 ]
+								collision_enabled = false
+								friction = 0.1
+								enable_limit = true
+								min_angle = -80.0
+								max_angle = 100.0
+							},
+							{
+								_class = "PhysicsJointRevolute"
+								parent_body = "grip"
+								child_body = "frame8_support"
+								anchor_origin = [ 0.309051, 2.0521, 0.315001 ]
+								anchor_angles = [ 135.0, 0.0, 0.0 ]
+								collision_enabled = false
+								friction = 0.1
+								enable_limit = true
+								min_angle = -80.0
+								max_angle = 100.0
+							},
+						]
+					},
+					{
+						_class = "Folder"
+						name = "Radial"
+						children = 
+						[
+							{
+								_class = "PhysicsJointWeld"
+								name = "_copy6"
+								parent_body = "frame7_4"
+								child_body = "frame8_4"
+								anchor_origin = [ 0.0, 0.0, 0.0 ]
+								anchor_angles = [ 15.6097, -110.925003, -100.814003 ]
+								collision_enabled = false
+								linear_freqeuncy = 8.64
+								linear_damping_ratio = 0.891
+								max_force = 0.0
+								angular_frequency = 9.45
+								angular_damping_ratio = 0.913
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								name = "_copy2"
+								parent_body = "frame3_4"
+								child_body = "frame4_4"
+								anchor_origin = [ 0.0, 0.0, 0.0 ]
+								anchor_angles = [ 15.6097, -110.925003, -100.814003 ]
+								collision_enabled = false
+								linear_freqeuncy = 8.64
+								linear_damping_ratio = 0.891
+								max_force = 0.0
+								angular_frequency = 9.45
+								angular_damping_ratio = 0.913
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								parent_body = "frame1_4"
+								child_body = "frame2_4"
+								anchor_origin = [ 0.0, 0.0, 0.0 ]
+								anchor_angles = [ 15.6097, -110.925003, -100.814003 ]
+								collision_enabled = false
+								linear_freqeuncy = 8.64
+								linear_damping_ratio = 0.891
+								max_force = 0.0
+								angular_frequency = 9.45
+								angular_damping_ratio = 0.913
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								name = "_copy4"
+								parent_body = "frame5_4"
+								child_body = "frame6_4"
+								anchor_origin = [ 0.0, 0.0, 0.0 ]
+								anchor_angles = [ 15.6097, -110.925003, -100.814003 ]
+								collision_enabled = false
+								linear_freqeuncy = 8.64
+								linear_damping_ratio = 0.891
+								max_force = 0.0
+								angular_frequency = 9.45
+								angular_damping_ratio = 0.913
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								name = "_copy5"
+								parent_body = "frame6_4"
+								child_body = "frame7_4"
+								anchor_origin = [ 0.0, 0.0, 0.0 ]
+								anchor_angles = [ 15.6097, -110.925003, -100.814003 ]
+								collision_enabled = false
+								linear_freqeuncy = 8.64
+								linear_damping_ratio = 0.891
+								max_force = 0.0
+								angular_frequency = 9.45
+								angular_damping_ratio = 0.913
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								name = "_copy7"
+								parent_body = "frame8_4"
+								child_body = "frame1_4"
+								anchor_origin = [ 0.0, 0.0, 0.0 ]
+								anchor_angles = [ 15.6097, -110.925003, -100.814003 ]
+								collision_enabled = false
+								linear_freqeuncy = 8.64
+								linear_damping_ratio = 0.891
+								max_force = 0.0
+								angular_frequency = 9.45
+								angular_damping_ratio = 0.913
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								name = "_copy3"
+								parent_body = "frame4_4"
+								child_body = "frame5_4"
+								anchor_origin = [ 0.0, 0.0, 0.0 ]
+								anchor_angles = [ 15.6097, -110.925003, -100.814003 ]
+								collision_enabled = false
+								linear_freqeuncy = 8.64
+								linear_damping_ratio = 0.891
+								max_force = 0.0
+								angular_frequency = 9.45
+								angular_damping_ratio = 0.913
+								max_torque = 0.0
+							},
+							{
+								_class = "PhysicsJointWeld"
+								name = "_copy1"
+								parent_body = "frame2_4"
+								child_body = "frame3_4"
+								anchor_origin = [ 0.0, 0.0, 0.0 ]
+								anchor_angles = [ 15.6097, -110.925003, -100.814003 ]
+								collision_enabled = false
+								linear_freqeuncy = 8.64
+								linear_damping_ratio = 0.891
+								max_force = 0.0
+								angular_frequency = 9.45
+								angular_damping_ratio = 0.913
+								max_torque = 0.0
+							},
+						]
+						disabled = true
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "Folder"
+						name = "1"
+						children = 
+						[
+							{
+								_class = "PhysicsShapeCapsule"
+								name = "shaft"
+								parent_bone = "handle"
+								surface_prop = "default"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 0.0, 5.871655, 0.0 ]
+								point1 = [ 0.0, 36.39061, 0.0 ]
+							},
+							{
+								_class = "Folder"
+								name = "handle"
+								children = 
+								[
+									{
+										_class = "PhysicsShapeCapsule"
+										name = "_copy"
+										parent_bone = "handle"
+										surface_prop = "default"
+										collision_prop = "default"
+										radius = 0.35
+										point0 = [ 0.0, -0.217235, 0.0 ]
+										point1 = [ 0.0, 5.817216, 0.0 ]
+									},
+									{
+										_class = "PhysicsShapeCapsule"
+										name = "_copy_copy"
+										parent_bone = "handle"
+										surface_prop = "default"
+										collision_prop = "default"
+										radius = 0.35
+										point0 = [ 0.0, -1.73728, -1.074977 ]
+										point1 = [ 0.0, -0.435875, -0.044242 ]
+									},
+									{
+										_class = "PhysicsShapeCapsule"
+										name = "_copy_copy_copy"
+										parent_bone = "handle"
+										surface_prop = "default"
+										collision_prop = "default"
+										radius = 0.35
+										point0 = [ 0.0, -1.585568, -2.805012 ]
+										point1 = [ 0.0, -1.877138, -1.470292 ]
+									},
+									{
+										_class = "PhysicsShapeCapsule"
+										name = "_copy_copy_copy_copy"
+										parent_bone = "handle"
+										surface_prop = "default"
+										collision_prop = "default"
+										radius = 0.35
+										point0 = [ 0.0, -0.318881, -3.716441 ]
+										point1 = [ 0.0, -1.480828, -3.011073 ]
+									},
+									{
+										_class = "PhysicsShapeCapsule"
+										name = "_copy_copy_copy_copy_copy"
+										parent_bone = "handle"
+										surface_prop = "default"
+										collision_prop = "default"
+										radius = 0.35
+										point0 = [ 0.0, 2.158546, -3.089106 ]
+										point1 = [ 0.0, -0.035331, -3.801412 ]
+									},
+								]
+							},
+						]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame1_1"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 2.3, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.5, 3.6, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame1_2"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 3.5, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.6, 5.3, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame1_3"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.2, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.3, 7.0, 0.3 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame1_4"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.3, 0.3 ]
+						angles = [ 0.0, 0.0, 2.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "frame1_support"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.25
+						point0 = [ 0.0, 1.5, 0.0 ]
+						point1 = [ 0.0, 10.5, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame2_1"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 2.3, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.5, 3.6, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame2_2"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 3.5, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.6, 5.3, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame2_3"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.2, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame2_4"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.3, 0.3 ]
+						angles = [ 0.0, 0.0, 2.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "frame2_support"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.25
+						point0 = [ 0.0, 1.5, 0.0 ]
+						point1 = [ 0.0, 10.5, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame3_1"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 2.3, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.5, 3.6, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame3_2"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 3.5, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.6, 5.3, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame3_3"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.2, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame3_4"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.3, 0.3 ]
+						angles = [ 0.0, 0.0, 2.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "frame3_support"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.25
+						point0 = [ 0.0, 1.5, 0.0 ]
+						point1 = [ 0.0, 10.5, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame4_1"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 2.3, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.5, 3.6, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame4_2"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 3.5, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.6, 5.3, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame4_3"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.2, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame4_4"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.3, 0.3 ]
+						angles = [ 0.0, 0.0, 2.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "frame4_support"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.25
+						point0 = [ 0.0, 1.5, 0.0 ]
+						point1 = [ 0.0, 10.5, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame5_1"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 2.3, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.5, 3.6, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame5_2"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 3.5, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.6, 5.3, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame5_3"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.2, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame5_4"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.3, 0.3 ]
+						angles = [ 0.0, 0.0, 2.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "frame5_support"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.25
+						point0 = [ 0.0, 1.5, 0.0 ]
+						point1 = [ 0.0, 10.5, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame6_1"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 2.3, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.5, 3.6, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame6_2"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 3.5, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.6, 5.3, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame6_3"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.2, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame6_4"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.3, 0.3 ]
+						angles = [ 0.0, 0.0, 2.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "frame6_support"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.25
+						point0 = [ 0.0, 1.5, 0.0 ]
+						point1 = [ 0.0, 10.5, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame7_1"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 2.3, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.5, 3.6, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame7_2"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 3.5, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.6, 5.3, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame7_3"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.2, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame7_4"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.3, 0.3 ]
+						angles = [ 0.0, 0.0, 2.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "frame7_support"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.25
+						point0 = [ 0.0, 1.5, 0.0 ]
+						point1 = [ 0.0, 10.5, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame8_1"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 2.3, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.5, 3.6, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame8_2"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 3.5, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.6, 5.3, 0.4 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame8_3"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.2, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "frame8_4"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 4.3, 0.3 ]
+						angles = [ 0.0, 0.0, 2.0 ]
+						dimensions = [ 0.7, 7.0, 0.5 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "frame8_support"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.25
+						point0 = [ 0.0, 1.5, 0.0 ]
+						point1 = [ 0.0, 10.5, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "grip"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.332814
+						point0 = [ 0.0, 0.04301, 0.0 ]
+						point1 = [ 0.0, 1.982165, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "grip"
+						parent_bone = "grip"
+						relative_origin = [ 0.0, 1.099501, 0.0 ]
+						relative_angles = [ -0.0, 0.0, -0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "grip_max"
+						parent_bone = "handle"
+						relative_origin = [ 0.0, 28.422602, -0.0 ]
+						relative_angles = [ -0.0, 0.0, -0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "grip_min"
+						parent_bone = "handle"
+						relative_origin = [ 0.0, 7.717913, 0.0 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "umbrella"
+						children = 
+						[
+							{
+								_class = "RenderMeshMarkup"
+								material_search_path = "materials/models/props_toys"
+								use_expensive_tangents = false
+								high_high_precision_texcoords = false
+								calc_per_vertex_curvature = false
+								prefer_high_density_tris_in_uv_density_calc = false
+							},
+						]
+						filename = "models/props_toys/umbrella.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "umbrella_closed"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/props_toys/umbrella_anims/umbrella_closed.dmx"
+						start_frame = 0
+						end_frame = 1
+						framerate = 24.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "umbrella_closing"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/props_toys/umbrella_anims/umbrella_closing.dmx"
+						start_frame = 0
+						end_frame = 29
+						framerate = 24.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "umbrella_open"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/props_toys/umbrella_anims/umbrella_open.dmx"
+						start_frame = 0
+						end_frame = 1
+						framerate = 24.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "umbrella_opening"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/props_toys/umbrella_anims/umbrella_opening.dmx"
+						start_frame = 0
+						end_frame = 29
+						framerate = 24.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "umbrella_half"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/props_toys/umbrella_anims/umbrella_half.dmx"
+						start_frame = 0
+						end_frame = 1
+						framerate = 24.0
+						reverse = false
+					},
+					{
+						_class = "1DBlend"
+						name = "pose"
+						children = 
+						[
+							{
+								_class = "AnimAutoLayer"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						poseParam = "open"
+						blendList = 
+						[
+							{
+								name = "umbrella_closed"
+								weight = 0.0
+							},
+							{
+								name = "umbrella_half"
+								weight = 0.5
+							},
+							{
+								name = "umbrella_open"
+								weight = 1.0
+							},
+						]
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "ClothShapeList"
+				children = 
+				[
+					{
+						_class = "ClothShapeCapsule"
+						parent_bone = "handle"
+						cloth_collision_layer0 = true
+						cloth_collision_layer1 = true
+						cloth_collision_layer2 = true
+						cloth_collision_layer3 = true
+						cloth_stickiness = 0.0
+						cloth_collision_priority = 0
+						radius0 = 0.691392
+						radius1 = 0.44603
+						point0 = [ 0.0, 2.35685, 0.0 ]
+						point1 = [ 0.0, 36.148743, 0.0 ]
+					},
+				]
+			},
+		]
+		model_archetype = "physics_prop_model"
+		primary_associated_entity = "prop_physics"
+		anim_graph_name = ""
+		importer_notes = """
+Imported from VMDL
+==Warnings==
+Failed to apply 'fps' option to non-anim-file: 'pose'
+
+"""
+	}
+}

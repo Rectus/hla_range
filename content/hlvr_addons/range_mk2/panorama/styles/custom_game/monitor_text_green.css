@@ -40,8 +40,8 @@
 	horizontal-align: center;
 	flow-children: down;
 	background-color: screen_dim;
-	padding: 15px;
-	padding-top: -12px;
+	padding: 17px;
+	padding-top: -30px;
 }
 
 .Window.SpaceBottom {
@@ -55,11 +55,11 @@
 	horizontal-align: center;
 	flow-children: right-wrap;
 	background-color: screen_dim;
-	border: 8px solid screen_bright;
+	border: 2px solid screen_bright;
 	margin: 0px;
-	padding-left: 30px;
+	padding-left: 32px;
 	padding-right: 0px;
-	padding-top: 40px;
+	padding-top: 50px;
 	padding-bottom: 0px;
 	margin-bottom: 10px;
 }
@@ -89,16 +89,19 @@
 }
 
 .TextButton {
-	width: 350px;
-	height: 120px;
+	width: 360px;
+	height: 140px;
 	vertical-align: top;
 	horizontal-align: left;
 	flow-children: right;
 	background-color: screen_medium;
-	padding: 30px;
-	padding-top: 32px;
-	margin-right: 30px;
-	margin-bottom: 40px;
+	padding: 0px;
+	padding-top: 24px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	
+	border-bottom: 40px solid screen_off_visible;
+	border-right: 20px solid screen_off_visible;
 
 	// Child text
 	color: screen_off_visible;
@@ -126,4 +129,7 @@
 	color: screen_off_visible;
 	background-color: screen_medium_dim;
 	sound: "Button_VidLink.Answer";
+	
+	border-bottom: 40px solid screen_dim;
+	border-right: 20px solid screen_dim;
 }

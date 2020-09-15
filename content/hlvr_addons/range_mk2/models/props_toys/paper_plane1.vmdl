@@ -83,12 +83,12 @@
 					{
 						_class = "PhysicsBodyMarkup"
 						target_body = "undefined"
-						mass_override = 0.05
-						inertia_scale = 2.0
+						mass_override = 0.1
+						inertia_scale = 1.0
 						linear_damping = 0.0
 						angular_damping = 0.0
 						use_mass_center_override = true
-						mass_center_override = [ 0.3, 0.0, 0.0 ]
+						mass_center_override = [ -0.3, 0.0, 0.0 ]
 					},
 				]
 			},
@@ -168,7 +168,16 @@
 						name = "lift_directions"
 						parent_bone = ""
 						relative_origin = [ 0.0, 0.0, 0.0 ]
-						relative_angles = [ -7.027466, 0.0, 0.0 ]
+						relative_angles = [ -5.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "wing_drag_center"
+						parent_bone = ""
+						relative_origin = [ -1.477462, 0.0, 0.336738 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false
 					},

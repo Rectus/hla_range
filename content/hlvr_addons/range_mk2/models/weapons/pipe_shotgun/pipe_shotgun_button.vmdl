@@ -1,0 +1,163 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/weapons/pipe_shotgun/pipe_shotgun_button.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "BoneMarkupList"
+				bone_cull_type = "Leaf Only"
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "handpose_data"
+						game_keys = 
+						{
+							handpose_bone = "flashlight_button"
+							handpose_model = "custom"
+							allow_procedural_handpose = true
+							global_pose_template = false
+						}
+					},
+					{
+						_class = "GenericGameData"
+						disabled = true
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "idle"
+							pose_special_type = "0"
+							conform_fingers = false
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ 4.21988, 2.57405, 2.80327 ]
+							angles_left = [ -0.0, 0.0, 135.152 ]
+							origin_right = [ 4.21988, 0.282605, 2.80327 ]
+							angles_right = [ -0.0, 0.0, -135.152 ]
+							max_distance = 1.0
+							finger_thumb = 0.44392
+							finger_pinky = 0.586728
+							finger_ring = 0.489842
+							finger_middle = 0.571429
+							finger_index = 0.467784
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.0, 0.0, 2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, -0.0, 2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = true
+							rotation_axis0 = [ 4.0, 1.4, 0.34 ]
+							rotation_axis1 = [ 8.0, 1.4, 0.34 ]
+							rotation_min = 90.0
+							rotation_max = 90.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+					{
+						_class = "GenericGameData"
+						name = "_copy"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "idle"
+							pose_special_type = "0"
+							conform_fingers = false
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ 7.57492, 2.25424, 2.58987 ]
+							angles_left = [ 46.8711, -61.3432, 106.968 ]
+							origin_right = [ 7.57492, 0.510691, 2.58987 ]
+							angles_right = [ 46.8711, 61.3432, -106.968 ]
+							max_distance = 1.0
+							finger_thumb = 0.501741
+							finger_pinky = 0.586728
+							finger_ring = 0.489842
+							finger_middle = 0.571429
+							finger_index = 0.478625
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.0, 0.0, 2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, -0.0, 2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = true
+							rotation_axis0 = [ 4.0, 1.4, 0.34 ]
+							rotation_axis1 = [ 8.0, 1.4, 0.34 ]
+							rotation_min = 90.0
+							rotation_max = 90.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeSphere"
+						parent_bone = "flashlight_button"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.353831
+						center = [ 0.151734, 0.0, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "flashlight_button_interact"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/pipe_shotgun/anims/flashlight_button_interact.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
+		anim_graph_name = ""
+	}
+}

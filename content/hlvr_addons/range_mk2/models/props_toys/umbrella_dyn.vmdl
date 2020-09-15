@@ -1,0 +1,663 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "BoneMarkupList"
+				bone_cull_type = "Leaf Only"
+			},
+			{
+				_class = "ClothProxyMeshList"
+				children = 
+				[
+					{
+						_class = "ClothProxyMeshFile"
+						name = "umbrella_dyn_clothproxy"
+						filename = "models/props_toys/umbrella_dyn_clothproxy.dmx"
+						import_scale = 1.0
+						back_solve_joints = false
+						back_solve_joints_drive_meshes = false
+						flex_cloth_borders = false
+						add_bones_to_render_mesh = true
+						back_solve_influence_threshold = 0.05
+						cloth_friction_bias = 0.0
+						cloth_friction_scale = 1.0
+						envelope_inches = 1000.0
+						cloth_goal_strength_bias = 0.0
+						cloth_goal_strength_scale = 1.0
+						cloth_drag_scale = 1.0
+						cloth_mass_scale = 1.0
+						cloth_gravity_scale = 1.0
+						cloth_collision_radius_scale = 1.0
+						cloth_ground_collision_scale = 1.0
+						cloth_ground_friction_scale = 1.0
+						cloth_use_rods_scale = 1.0
+						cloth_make_rods_scale = 1.0
+						cloth_anchor_free_rotate_scale = 1.0
+						cloth_volumetric_scale = 1.0
+						cloth_suspenders_scale = 1.0
+						cloth_bend_stiffness_scale = 1.0
+						cloth_stray_radius_inv_scale = 1.0
+						cloth_stray_radius_scale = 1.0
+						cloth_stray_radius_stretchiness_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "ClothParams"
+						default_stretch = 0.0
+						additional_shear_stretch = 0.0
+						extra_iterations = 1
+						extra_goal_iterations = 0
+						extra_pressure_iterations = 0
+						goal_strength_bias = 0.0
+						default_gravity_scale = 1.0
+						default_vel_air_drag = 0.392
+						default_exp_air_drag = 0.191
+						velocity_smooth_rate = 0.0
+						internal_pressure = 0.0
+						windage = 0.851
+						wind_drag = 0.125
+						velocity_smooth_iterations = 0
+						default_ground_friction = 0.073
+						default_world_collision_penetration = 0.0
+						add_world_collision_radius = 0.252
+						local_force = 1.0
+						local_rotation = 0.0
+						volumetric_solve_amount = 0.0
+						add_curvature = 0.172
+						quad_bend_tolerance = 0.05
+						follow_the_lead = false
+						use_per_node_local_force_and_rotation = false
+						uninertial_rods = false
+						explicit_masses = false
+						unitless_damping = true
+						force_world_collision_on_all_nodes = false
+						new_style = true
+						can_collide_with_world_hulls = true
+						can_collide_with_world_meshes = true
+						can_collide_with_world_capsule_and_spheres = true
+						add_stiffness_rods = true
+						rigid_edge_hinges = false
+						soft_skin_animation = false
+						add_bend_only_rods = false
+						immovable = false
+					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "idle"
+							pose_special_type = "0"
+							conform_fingers = false
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ -0.102227, 0.550644, 10.9717 ]
+							angles_left = [ -22.2911, 0.0, 0.0 ]
+							origin_right = [ -0.102227, -0.550644, 10.9771 ]
+							angles_right = [ -22.2911, -0.0, 0.0 ]
+							max_distance = 3.0
+							finger_thumb = 0.704978
+							finger_pinky = 0.505031
+							finger_ring = 0.52381
+							finger_middle = 0.546746
+							finger_index = 0.570093
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.0, 0.0, 2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, -0.0, 2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = true
+							rotation_axis0 = [ 0.0, 0.0, 14.0336 ]
+							rotation_axis1 = [ 0.0, 0.0, 8.66058 ]
+							rotation_min = 180.0
+							rotation_max = 180.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "handpose_data"
+						game_keys = 
+						{
+							handpose_bone = "grip"
+							handpose_model = "custom"
+							allow_procedural_handpose = false
+							global_pose_template = false
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "grip"
+						surface_prop = "prop.plastic"
+						collision_prop = "default"
+						radius = 0.452499
+						point0 = [ 0.007371, 0.0, 0.0 ]
+						point1 = [ 2.10538, 0.0, 0.0 ]
+					},
+					{
+						_class = "Folder"
+						name = "Parts"
+						children = 
+						[
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame1_1"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 4.50468, 0.0, 0.0 ]
+								point1 = [ 0.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame1_2"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.3
+								point0 = [ 6.982736, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame1_3"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ 8.054351, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame1_4"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.5
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 7.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame1_support"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 11.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame2_1"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 4.50468, 0.0, 0.0 ]
+								point1 = [ 0.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame2_2"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.3
+								point0 = [ 6.982737, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame2_3"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ 8.054356, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame2_4"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.5
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 7.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame2_support"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 11.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame3_1"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 4.50468, 0.0, 0.0 ]
+								point1 = [ 0.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame3_2"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.3
+								point0 = [ 6.982738, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame3_3"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ 8.054353, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame3_4"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.5
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 7.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame3_support"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 11.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame4_1"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 4.50468, 0.0, 0.0 ]
+								point1 = [ 0.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame4_2"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.3
+								point0 = [ 6.982736, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame4_3"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ 8.054353, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame4_4"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.5
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 7.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame4_support"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 11.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame5_1"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 4.50468, 0.0, 0.0 ]
+								point1 = [ 0.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame5_2"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.3
+								point0 = [ 6.982739, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame5_3"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ 8.054358, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame5_4"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.5
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 7.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame5_support"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 11.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame6_1"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 4.50468, 0.0, 0.0 ]
+								point1 = [ 0.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame6_2"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.3
+								point0 = [ 6.982736, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame6_3"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ 8.054353, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame6_4"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.5
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 7.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame6_support"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 11.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame7_1"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 4.50468, 0.0, 0.0 ]
+								point1 = [ 0.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame7_2"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.3
+								point0 = [ 6.982738, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame7_3"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ 8.054356, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame7_4"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.5
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 7.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame7_support"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 11.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame8_1"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 4.50468, 0.0, 0.0 ]
+								point1 = [ 0.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame8_2"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.3
+								point0 = [ 6.982737, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame8_3"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.35
+								point0 = [ 8.054358, 0.0, 0.0 ]
+								point1 = [ 0.0, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame8_4"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.5
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 7.5, 0.0, 0.0 ]
+							},
+							{
+								_class = "PhysicsShapeCapsule"
+								parent_bone = "frame8_support"
+								surface_prop = "prop.metal"
+								collision_prop = "default"
+								radius = 0.2
+								point0 = [ 0.0, 0.0, 0.0 ]
+								point1 = [ 11.5, 0.0, 0.0 ]
+							},
+						]
+						disabled = true
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "grip"
+						parent_bone = "grip"
+						relative_origin = [ 0.0, 1.099501, 0.0 ]
+						relative_angles = [ -0.0, 0.0, -0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "grip_max"
+						parent_bone = "handle"
+						relative_origin = [ 0.0, 28.422602, -0.0 ]
+						relative_angles = [ -0.0, 0.0, -0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "grip_min"
+						parent_bone = "handle"
+						relative_origin = [ 0.0, 7.717913, 0.0 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "umbrella_dyn"
+						children = 
+						[
+							{
+								_class = "RenderMeshMarkup"
+								material_search_path = "materials/models/props_toys"
+								use_expensive_tangents = false
+								high_high_precision_texcoords = false
+								calc_per_vertex_curvature = false
+								prefer_high_density_tris_in_uv_density_calc = false
+							},
+						]
+						filename = "models/props_toys/umbrella_dyn.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "umbrella_interact"
+						children = 
+						[
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_CLOTH_STIFFEN"
+								event_frame = 17
+								event_keys = 
+								{
+									Value = 0.5
+									Speed = 2.0
+									Length = 0.4
+									VertexSet = "tighten"
+								}
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/props_toys/umbrella_anims/umbrella_interact.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "ClothShapeList"
+				children = 
+				[
+					{
+						_class = "ClothShapeCapsule"
+						parent_bone = "handle"
+						cloth_collision_layer0 = true
+						cloth_collision_layer1 = true
+						cloth_collision_layer2 = true
+						cloth_collision_layer3 = true
+						cloth_stickiness = 0.0
+						cloth_collision_priority = 0
+						radius0 = 0.691392
+						radius1 = 0.44603
+						point0 = [ 2.35685, 0.0, 0.0 ]
+						point1 = [ 36.148701, 0.0, 0.0 ]
+					},
+				]
+			},
+		]
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
+		anim_graph_name = ""
+		importer_notes = """
+Imported from VMDL
+==Warnings==
+Failed to apply 'fps' option to non-anim-file: 'pose'
+
+"""
+	}
+}

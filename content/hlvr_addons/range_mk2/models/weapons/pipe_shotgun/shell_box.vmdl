@@ -1,0 +1,211 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "prop_data"
+						game_keys = 
+						{
+							base = ""
+							allowstatic = false
+							bakelighting = true
+							damage_table = ""
+							"dmg.bullets" = -1.0
+							"dmg.club" = -1.0
+							"dmg.explosive" = -1.0
+							"dmg.fire" = -1.0
+							health = -1.0
+							spawn_motion_disabled = false
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_box"
+						game_keys = 
+						{
+							bonename = ""
+							dimensions = [ 2.91859, 3.87441, 3.87068 ]
+							offset_origin = [ 0.004574, 0.007204, 1.91613 ]
+							offset_angles = [ 0.0, 0.0, 0.0 ]
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "box"
+						surface_prop = "prop.cardboard_carton_biscuits"
+						collision_prop = "default"
+						origin = [ 0.742394, -0.009671, 0.005093 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 1.48966, 2.881761, 3.869344 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "flap_l"
+						surface_prop = "prop.cardboard_carton_biscuits"
+						collision_prop = "default"
+						origin = [ 0.959974, -0.008745, -0.023167 ]
+						angles = [ -0.0, 0.0, -8.751822 ]
+						dimensions = [ 1.740559, 2.752892, 0.102508 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "flap_r"
+						surface_prop = "prop.cardboard_carton_biscuits"
+						collision_prop = "default"
+						origin = [ 0.954989, -0.020423, 0.015226 ]
+						angles = [ -0.000001, 0.000001, -8.334958 ]
+						dimensions = [ 1.755966, 2.756167, 0.121444 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "lid"
+						surface_prop = "prop.cardboard_carton_biscuits"
+						collision_prop = "default"
+						origin = [ 1.510818, 0.012128, 0.004644 ]
+						angles = [ -0.0, 0.000001, -7.833284 ]
+						dimensions = [ 2.592945, 0.131589, 3.818185 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy"
+						parent_bone = "box"
+						surface_prop = "prop.cardboard_carton_biscuits"
+						collision_prop = "default"
+						origin = [ 2.66657, 1.365835, 0.005092 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 2.325687, 0.130748, 3.869344 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy_copy"
+						parent_bone = "box"
+						surface_prop = "prop.cardboard_carton_biscuits"
+						collision_prop = "default"
+						origin = [ 2.6698, -1.376992, 0.005093 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 2.339437, 0.147118, 3.869344 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy_copy_copy"
+						parent_bone = "box"
+						surface_prop = "prop.cardboard_carton_biscuits"
+						collision_prop = "default"
+						origin = [ 2.667155, -0.004209, 1.875805 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 2.318041, 2.596315, 0.127921 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy_copy_copy_copy"
+						parent_bone = "box"
+						surface_prop = "prop.cardboard_carton_biscuits"
+						collision_prop = "default"
+						origin = [ 2.66356, -0.002081, -1.851352 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 2.341691, 2.594989, 0.156453 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/weapons/pipe_shotgun/shell_box.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "box"
+						child_body = "flap_l"
+						anchor_origin = [ 3.84122, 0.006347, -1.8911 ]
+						anchor_angles = [ 0.0, 0.0, 90.0 ]
+						collision_enabled = true
+						friction = 0.4
+						enable_limit = true
+						min_angle = -125.300003
+						max_angle = 167.199997
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "box"
+						child_body = "flap_r"
+						anchor_origin = [ 3.84122, 0.006348, 1.88976 ]
+						anchor_angles = [ 0.0, 0.0, 90.0 ]
+						collision_enabled = true
+						friction = 0.4
+						enable_limit = true
+						min_angle = -162.399994
+						max_angle = 125.199997
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "box"
+						child_body = "lid"
+						anchor_origin = [ 3.94254, -1.41334, -0.0 ]
+						anchor_angles = [ 0.0, 0.0, 0.0 ]
+						collision_enabled = true
+						friction = 0.6
+						enable_limit = true
+						min_angle = -134.100006
+						max_angle = 144.699997
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "shell_spawn"
+						parent_bone = "box"
+						relative_origin = [ 3.543108, 0.05068, -0.58263 ]
+						relative_angles = [ -66.084694, -89.999969, 0.000055 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "opening"
+						parent_bone = "box"
+						relative_origin = [ 3.69304, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+		]
+		model_archetype = "jointed_physics_model"
+		primary_associated_entity = "prop_ragdoll"
+		anim_graph_name = ""
+	}
+}

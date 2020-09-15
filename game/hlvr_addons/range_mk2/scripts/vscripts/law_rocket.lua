@@ -141,6 +141,7 @@ function Explode(hitEnt)
 	explosionKeyvals.origin = hitPos
 	local expl = SpawnEntityFromTableSynchronous("env_explosion", explosionKeyvals)
 	EntFireByHandle(thisEntity, expl, "Explode", "", 0, user)
+	EntFireByHandle(thisEntity, expl, "Kill", "", 5, user)
 
 	thisEntity:Kill()
 end
