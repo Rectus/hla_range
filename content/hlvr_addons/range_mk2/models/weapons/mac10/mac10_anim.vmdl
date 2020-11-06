@@ -1,0 +1,875 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 0.021084, -0.422898, 0.044252 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 2.335265, 8.626701, 1.657348 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy"
+						disabled = true
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 2.979556, -1.269496, -0.010184 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 3.42567, 1.706262, 1.109083 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy_copy"
+						disabled = true
+						parent_bone = "magazine"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ -0.01656, -2.57342, -0.009594 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 1.361164, 5.123574, 0.924612 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy_copy1"
+						disabled = true
+						parent_bone = "strap_l_5"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 1.229858, 0.000083, 0.35612 ]
+						angles = [ -0.014184, -90.424141, 0.000902 ]
+						dimensions = [ 0.305231, 2.69116, 0.956325 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy_copy1_copy"
+						disabled = true
+						parent_bone = "strap_l_3"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 0.1571, 0.000078, 0.537489 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.414821, 0.238621, 0.956325 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy_copy1_copy_copy"
+						disabled = true
+						parent_bone = "strap_l_1"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 0.337175, 0.000078, 0.371423 ]
+						angles = [ 0.023264, 7.66219, 0.13402 ]
+						dimensions = [ 0.892254, 0.238621, 0.909617 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy1"
+						disabled = true
+						parent_bone = "strap_5"
+						surface_prop = "base.cloth"
+						collision_prop = "default"
+						origin = [ 0.515558, 0.004298, -0.001096 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 4.371359, 0.278187, 0.976454 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy_copy2"
+						disabled = true
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 7.329296, -1.19166, 0.010713 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 5.116108, 1.394975, 0.938064 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy1_copy"
+						disabled = true
+						parent_bone = "strap_5"
+						surface_prop = "base.cloth"
+						collision_prop = "default"
+						origin = [ 0.492963, -0.007553, -0.001089 ]
+						angles = [ -0.001733, -0.008551, -0.000043 ]
+						dimensions = [ 4.371359, 0.278187, 0.976454 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						name = "charge_handle"
+						disabled = true
+						parent_bone = "bolt"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.38
+						point0 = [ 0.0, 0.017027, 0.0 ]
+						point1 = [ 0.0, 0.497691, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "mac10"
+						filename = "models/weapons/mac10/mac10_animated.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "bullet1"
+						filename = "models/weapons/mac10/mac10_bullet1.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "bullet2"
+						filename = "models/weapons/mac10/mac10_bullet2.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "strap"
+						filename = "models/weapons/mac10/mac10_strap.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "magazine"
+						filename = "models/weapons/mac10/mac10_magazine.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "supressor"
+						filename = "models/weapons/mac10/mac10_supressor.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "beans"
+						children = 
+						[
+							{
+								_class = "RenderMeshMarkup"
+								material_search_path = "materials/food/"
+								use_expensive_tangents = false
+								high_high_precision_texcoords = false
+								calc_per_vertex_curvature = false
+								prefer_high_density_tris_in_uv_density_calc = false
+							},
+						]
+						filename = "models/weapons/mac10/mac10_beans.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "charge_handle"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/mac10/anims/charge_handle.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimBindPose"
+						name = "bind"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						frame_count = 1
+						frame_rate = 30
+					},
+					{
+						_class = "AnimFile"
+						name = "bolt_back"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/mac10/anims/bolt_back.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "bolt_forward"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/mac10/anims/bolt_forward.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "fire"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/mac10/anims/fire.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 420.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "stock"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/mac10/anims/stock.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "trigger_pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = true
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/mac10/anims/trigger_pose.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "PhysicsJointWeld"
+						disabled = true
+						parent_body = "gun"
+						child_body = "magazine"
+						anchor_origin = [ 4.71919, -1.17605, -0.0 ]
+						anchor_angles = [ -0.0, 0.000014, -90.0 ]
+						collision_enabled = false
+						linear_freqeuncy = 0.0
+						linear_damping_ratio = 0.0
+						max_force = 0.0
+						angular_frequency = 0.0
+						angular_damping_ratio = 0.0
+						max_torque = 0.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						disabled = true
+						parent_body = "gun"
+						child_body = "strapl_1"
+						anchor_origin = [ 1.28405, 4.04343, -0.0 ]
+						anchor_angles = [ -0.0, 36.395073, 0.0 ]
+						collision_enabled = false
+						friction = 0.52
+						enable_limit = true
+						min_angle = -125.900002
+						max_angle = 147.699997
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						disabled = true
+						parent_body = "strap_1"
+						child_body = "strap_3"
+						anchor_origin = [ 0.977129, 0.001487, 0.32461 ]
+						anchor_angles = [ 0.0, 0.0, 0.0 ]
+						collision_enabled = false
+						friction = 0.1
+						enable_limit = false
+						min_angle = 0.0
+						max_angle = 58.200001
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						disabled = true
+						parent_body = "strap_l_3"
+						child_body = "strap_l_5"
+						anchor_origin = [ 0.408794, 0.000075, 0.481535 ]
+						anchor_angles = [ 0.0, 0.0, 0.0 ]
+						collision_enabled = false
+						friction = 0.1
+						enable_limit = true
+						min_angle = 0.0
+						max_angle = 0.0
+					},
+				]
+			},
+			{
+				_class = "ClothProxyMeshList"
+				children = 
+				[
+					{
+						_class = "ClothProxyMeshFile"
+						name = "mac10_strap_cloth_proxy"
+						filename = "models/weapons/mac10/mac10_strap_cloth_proxy.dmx"
+						import_scale = 1.0
+						back_solve_joints = true
+						back_solve_joints_drive_meshes = true
+						flex_cloth_borders = false
+						add_bones_to_render_mesh = false
+						back_solve_influence_threshold = 0.05
+						cloth_friction_bias = 0.0
+						cloth_friction_scale = 1.0
+						envelope_inches = 1000.0
+						cloth_goal_strength_bias = 0.0
+						cloth_goal_strength_scale = 1.0
+						cloth_drag_scale = 1.0
+						cloth_mass_scale = 1.0
+						cloth_gravity_scale = 1.0
+						cloth_collision_radius_scale = 1.0
+						cloth_ground_collision_scale = 1.0
+						cloth_ground_friction_scale = 1.0
+						cloth_use_rods_scale = 1.0
+						cloth_make_rods_scale = 1.0
+						cloth_anchor_free_rotate_scale = 1.0
+						cloth_volumetric_scale = 1.0
+						cloth_suspenders_scale = 1.0
+						cloth_bend_stiffness_scale = 1.0
+						cloth_stray_radius_inv_scale = 1.0
+						cloth_stray_radius_scale = 1.0
+						cloth_stray_radius_stretchiness_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "ClothParams"
+						default_stretch = -1.0
+						additional_shear_stretch = -1.0
+						extra_iterations = 10
+						extra_goal_iterations = 1
+						extra_pressure_iterations = 0
+						goal_strength_bias = 0.0
+						default_gravity_scale = 1.0
+						default_vel_air_drag = 0.317
+						default_exp_air_drag = 0.341
+						velocity_smooth_rate = 0.0
+						internal_pressure = 0.0
+						windage = 0.0
+						wind_drag = 0.0
+						velocity_smooth_iterations = 0
+						default_ground_friction = 0.176
+						default_world_collision_penetration = 0.0
+						add_world_collision_radius = 0.0
+						local_force = 1.0
+						local_rotation = 0.0
+						volumetric_solve_amount = 1.0
+						add_curvature = 0.0
+						quad_bend_tolerance = 0.05
+						follow_the_lead = false
+						use_per_node_local_force_and_rotation = false
+						uninertial_rods = false
+						explicit_masses = false
+						unitless_damping = true
+						force_world_collision_on_all_nodes = false
+						new_style = true
+						can_collide_with_world_hulls = true
+						can_collide_with_world_meshes = true
+						can_collide_with_world_capsule_and_spheres = true
+						add_stiffness_rods = false
+						rigid_edge_hinges = true
+						soft_skin_animation = false
+						add_bend_only_rods = false
+						immovable = false
+					},
+				]
+			},
+			{
+				_class = "BodyGroupList"
+				children = 
+				[
+					{
+						_class = "BodyGroup"
+						name = "supressor"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "off"
+								meshes = [  ]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "on"
+								meshes = 
+								[
+									"supressor",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+					{
+						_class = "BodyGroup"
+						name = "base"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "all"
+								meshes = 
+								[
+									"mac10",
+									"strap",
+								]
+							},
+						]
+						hidden_in_tools = true
+					},
+					{
+						_class = "BodyGroup"
+						name = "bullets1"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "no_bullet1"
+								meshes = [  ]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "one_bullet"
+								meshes = 
+								[
+									"bullet1",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+					{
+						_class = "BodyGroup"
+						name = "bullets2"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "no_bullet2"
+								meshes = [  ]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "two_bullets"
+								meshes = 
+								[
+									"bullet2",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+					{
+						_class = "BodyGroup"
+						name = "magazine"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "30rd"
+								meshes = 
+								[
+									"magazine",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "none"
+								meshes = [  ]
+							},
+						]
+						hidden_in_tools = false
+					},
+					{
+						_class = "BodyGroup"
+						name = "beans"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "baked_beans"
+								meshes = 
+								[
+									"beans",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "no_beans"
+								meshes = [  ]
+							},
+						]
+						hidden_in_tools = false
+					},
+				]
+			},
+			{
+				_class = "ClothShapeList"
+				children = 
+				[
+					{
+						_class = "ClothShapeBox"
+						parent_bone = "gun"
+						cloth_collision_layer0 = true
+						cloth_collision_layer1 = true
+						cloth_collision_layer2 = true
+						cloth_collision_layer3 = true
+						cloth_stickiness = 0.0
+						cloth_collision_priority = 0
+						dimensions = [ 2.0, 5.911399, 2.15 ]
+						origin = [ 0.0, 0.9557, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+					},
+					{
+						_class = "ClothShapeCapsule"
+						name = "_copy2"
+						parent_bone = "gun"
+						cloth_collision_layer0 = true
+						cloth_collision_layer1 = true
+						cloth_collision_layer2 = true
+						cloth_collision_layer3 = true
+						cloth_stickiness = 0.0
+						cloth_collision_priority = 0
+						radius0 = 0.3
+						radius1 = 0.4
+						point0 = [ 0.0, 5.004687, 0.0 ]
+						point1 = [ 0.0, 3.851927, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "JiggleBoneList"
+				children = 
+				[
+					{
+						_class = "JiggleBone"
+						disabled = true
+						jiggle_root_bone = "strap_5"
+						jiggle_type = 1
+						has_yaw_constraint = true
+						has_pitch_constraint = true
+						has_angle_constraint = false
+						has_base_spring = false
+						allow_flex_length = false
+						invert_axes = false
+						has_collision = true
+						cloth_collision_layer0 = true
+						cloth_collision_layer1 = true
+						cloth_collision_layer2 = true
+						cloth_collision_layer3 = true
+						length = 5.0
+						tip_mass = 200.0
+						angle_limit = 0.0
+						min_yaw = -150.0
+						max_yaw = 150.0
+						yaw_friction = 0.0
+						yaw_bounce = 0.0
+						min_pitch = 0.0
+						max_pitch = 0.0
+						pitch_friction = 0.0
+						pitch_bounce = 0.0
+						base_mass = 0.0
+						base_stiffness = 0.0
+						base_damping = 0.0
+						base_left_min = 0.0
+						base_left_max = 0.0
+						base_left_friction = 0.0
+						base_up_min = 0.0
+						base_up_max = 0.0
+						base_up_friction = 0.0
+						base_forward_min = 0.0
+						base_forward_max = 0.0
+						base_forward_friction = 0.0
+						yaw_stiffness = 0.0
+						yaw_damping = 0.0
+						pitch_stiffness = 0.0
+						pitch_damping = 0.0
+						along_stiffness = 0.0
+						along_damping = 0.0
+						radius0 = 0.627017
+						radius1 = 0.663746
+						point0 = [ 0.0, 0.0, 0.0 ]
+						point1 = [ 2.079662, 0.000991, -0.000201 ]
+					},
+					{
+						_class = "JiggleBone"
+						disabled = true
+						jiggle_root_bone = "strap_3"
+						jiggle_type = 0
+						has_yaw_constraint = true
+						has_pitch_constraint = true
+						has_angle_constraint = false
+						has_base_spring = false
+						allow_flex_length = false
+						invert_axes = false
+						has_collision = false
+						cloth_collision_layer0 = true
+						cloth_collision_layer1 = true
+						cloth_collision_layer2 = true
+						cloth_collision_layer3 = true
+						length = 4.0
+						tip_mass = 200.0
+						angle_limit = 0.0
+						min_yaw = -160.0
+						max_yaw = 150.0
+						yaw_friction = 0.8
+						yaw_bounce = 0.1
+						min_pitch = 0.0
+						max_pitch = 0.0
+						pitch_friction = 0.0
+						pitch_bounce = 0.0
+						base_mass = 200.0
+						base_stiffness = 0.3
+						base_damping = 0.1
+						base_left_min = 0.0
+						base_left_max = 0.0
+						base_left_friction = 0.0
+						base_up_min = 0.0
+						base_up_max = 0.0
+						base_up_friction = 0.0
+						base_forward_min = 0.0
+						base_forward_max = 0.0
+						base_forward_friction = 0.0
+						yaw_stiffness = 0.0
+						yaw_damping = 0.0
+						pitch_stiffness = 0.0
+						pitch_damping = 0.0
+						along_stiffness = 0.0
+						along_damping = 0.0
+						radius0 = 0.456522
+						radius1 = 0.488473
+						point0 = [ 0.0, 0.0, 0.0 ]
+						point1 = [ 2.587314, 0.0, 0.0 ]
+					},
+					{
+						_class = "JiggleBone"
+						disabled = true
+						jiggle_root_bone = "strap_1"
+						jiggle_type = 0
+						has_yaw_constraint = true
+						has_pitch_constraint = true
+						has_angle_constraint = false
+						has_base_spring = false
+						allow_flex_length = false
+						invert_axes = false
+						has_collision = false
+						cloth_collision_layer0 = true
+						cloth_collision_layer1 = true
+						cloth_collision_layer2 = true
+						cloth_collision_layer3 = true
+						length = 2.0
+						tip_mass = 120.0
+						angle_limit = 0.0
+						min_yaw = -90.0
+						max_yaw = 150.0
+						yaw_friction = 0.3
+						yaw_bounce = 0.1
+						min_pitch = -3.0
+						max_pitch = 3.0
+						pitch_friction = 0.1
+						pitch_bounce = 0.1
+						base_mass = 120.0
+						base_stiffness = 0.3
+						base_damping = 0.1
+						base_left_min = 0.0
+						base_left_max = 0.0
+						base_left_friction = 0.0
+						base_up_min = 0.0
+						base_up_max = 0.0
+						base_up_friction = 0.0
+						base_forward_min = 0.0
+						base_forward_max = 0.0
+						base_forward_friction = 0.0
+						yaw_stiffness = 0.0
+						yaw_damping = 0.0
+						pitch_stiffness = 0.0
+						pitch_damping = 0.0
+						along_stiffness = 0.0
+						along_damping = 0.0
+						radius0 = 0.471236
+						radius1 = 0.514001
+						point0 = [ 0.0, 0.0, 0.0 ]
+						point1 = [ 0.54647, 0.0, 0.0 ]
+					},
+					{
+						_class = "JiggleBone"
+						disabled = true
+						jiggle_root_bone = "strap_base"
+						jiggle_type = 0
+						has_yaw_constraint = true
+						has_pitch_constraint = true
+						has_angle_constraint = false
+						has_base_spring = false
+						allow_flex_length = false
+						invert_axes = true
+						has_collision = false
+						cloth_collision_layer0 = true
+						cloth_collision_layer1 = true
+						cloth_collision_layer2 = true
+						cloth_collision_layer3 = true
+						length = 5.0
+						tip_mass = 0.0
+						angle_limit = 30.0
+						min_yaw = 0.0
+						max_yaw = 0.0
+						yaw_friction = 0.0
+						yaw_bounce = 0.0
+						min_pitch = 0.0
+						max_pitch = 0.0
+						pitch_friction = 0.0
+						pitch_bounce = 0.0
+						base_mass = 0.0
+						base_stiffness = 0.0
+						base_damping = 0.0
+						base_left_min = 0.0
+						base_left_max = 0.0
+						base_left_friction = 0.0
+						base_up_min = 0.0
+						base_up_max = 0.0
+						base_up_friction = 0.0
+						base_forward_min = 0.0
+						base_forward_max = 0.0
+						base_forward_friction = 0.0
+						yaw_stiffness = 0.0
+						yaw_damping = 0.0
+						pitch_stiffness = 0.0
+						pitch_damping = 0.0
+						along_stiffness = 0.0
+						along_damping = 0.0
+						radius0 = 0.424388
+						radius1 = 0.78435
+						point0 = [ 0.0, 0.0, 0.0 ]
+						point1 = [ 0.043362, -1.276357, 0.0 ]
+					},
+				]
+			},
+		]
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
+		anim_graph_name = "animgraphs/mac10.vanmgrph"
+	}
+}

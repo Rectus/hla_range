@@ -1,0 +1,205 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "cylinder_idle"
+							pose_special_type = "0"
+							conform_fingers = false
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ -8.10503, -8.20438, 0.716712 ]
+							angles_left = [ 0.0, 0.0, 90.8752 ]
+							origin_right = [ -8.10503, -8.43754, 0.716712 ]
+							angles_right = [ 0.0, 0.0, -90.8752 ]
+							max_distance = 3.0
+							finger_thumb = 1.0
+							finger_pinky = 1.0
+							finger_ring = 1.0
+							finger_middle = 1.0
+							finger_index = 1.0
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.0, -0.0, -2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, 0.0, -2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = true
+							rotation_axis0 = [ -8.04967, -5.91954, 0.016389 ]
+							rotation_axis1 = [ -8.02248, -11.8863, 0.022409 ]
+							rotation_min = 0.0
+							rotation_max = 0.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "handpose_data"
+						game_keys = 
+						{
+							handpose_bone = "crank"
+							handpose_model = "custom"
+							allow_procedural_handpose = true
+							global_pose_template = false
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "crank_handle"
+						surface_prop = "prop.metal_heavy_misc"
+						collision_prop = "default"
+						radius = 0.705448
+						point0 = [ -3.180541, 0.000001, 0.0 ]
+						point1 = [ 0.281642, -0.000002, -0.000001 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "lod0"
+						filename = "models/weapons/gatling_gun/gatling_gun.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"gatling_gun_body",
+								"gatling_gun_handle",
+								"gatling_gun_barrels",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "lod1"
+						filename = "models/weapons/gatling_gun/gatling_gun_lod1.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"gatling_gun_body_002",
+								"gatling_gun_barrels_002",
+								"gatling_gun_handle_002",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "lod2"
+						filename = "models/weapons/gatling_gun/gatling_gun_lod2.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"gatling_gun_body_003",
+								"gatling_gun_barrels_003",
+								"gatling_gun_handle_003",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "interact_action"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/gatling_gun/anims/interact_action.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "BoneMarkupList"
+				children = 
+				[
+					{
+						_class = "BoneMarkup"
+						target_bone = "weapon"
+						ignore_Translation = false
+						ignore_rotation = false
+						do_not_discard = true
+					},
+				]
+				bone_cull_type = "Leaf Only"
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"lod0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 20.0
+						meshes = 
+						[
+							"lod1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 45.0
+						meshes = 
+						[
+							"lod2",
+						]
+					},
+				]
+			},
+		]
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
+		anim_graph_name = ""
+	}
+}

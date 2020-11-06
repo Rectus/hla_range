@@ -29,7 +29,7 @@ local handID = 0
 
 local FIRE_RUMBLE_INTERVAL = 0.02
 local FIRE_RUMBLE_TIME = 0.1
-local THINK_INTERVAL = FrameTime()
+local THINK_INTERVAL = 1
 local DRAW_FIRE_DELAY = 0.1
 local FIRE_THINK_DELAY = 0.2
 local GRAB_DISTANCE_MAX = 7
@@ -50,6 +50,7 @@ local otherHandProp = nil
 local nockGuideParticle = -1
 local rumbleDrawLength = 0
 local fireRumbleElapsed = 0
+local dropGuard = nil
 
 
 local BOW_VIEW_KEYVALS = {
@@ -136,17 +137,62 @@ function Precache(context)
 	PrecacheModel(STRING_KEYVALS.model, context)
 	PrecacheModel(ARROW_KEYVALS.model, context)
 	PrecacheModel(BOW_VIEW_KEYVALS.model, context)
+	PrecacheModel("models/weapons/bow_dropguard.vmdl", context)
 end
 
-function Activate(aType)
+function Activate(activateType)
 
 	if not g_PropCarryManager then
 		SpawnEntityFromTableSynchronous("logic_script", {vscripts = "prop_carry_manager"})
 	end
 
+	
+
+
+	if activateType == ACTIVATE_TYPE_ONRESTORE -- on game load
+	then		
+		-- Hack to properly handle restoration from saves, 
+		-- since variables written by Activate() on restore don't end up in the script scope.
+		EntFireByHandle(thisEntity, thisEntity, "CallScriptFunction", "RestoreState")
+	
+	else
+		g_PropCarryManager.RegisterPickupCallback(thisEntity, function(playerEnt, usingHand, prop) CheckPickedUp(playerEnt, usingHand, prop) end )
+		g_PropCarryManager.RegisterDropCallback(thisEntity, function(playerEnt, usingHand, prop) CheckDropped(playerEnt, usingHand, prop) end )
+
+		local entKeyvals =
+		{
+			model = "models/weapons/bow_dropguard.vmdl";
+			interactAs = "player";
+			solid = 6;
+			origin = thisEntity:GetAbsOrigin();
+			angles = thisEntity:GetAngles();
+			targetname = "bow_dropguard";
+		}
+		
+		dropGuard = SpawnEntityFromTableSynchronous("prop_dynamic", entKeyvals)
+		dropGuard:SetParent(thisEntity, "")
+		dropGuard:SetAbsScale(0.01)
+	end
+
+end
+
+
+function RestoreState()
+
+	local children = thisEntity:GetChildren()
+	for idx, child in pairs(children) do
+		if child:GetName() == "bow_dropguard" then
+			dropGuard = child
+		
+		else
+			child:Kill()
+		end
+	end
+	
+	thisEntity:RemoveEffects(32) --EF_NODRAW
+	
 	g_PropCarryManager.RegisterPickupCallback(thisEntity, function(playerEnt, usingHand, prop) CheckPickedUp(playerEnt, usingHand, prop) end )
 	g_PropCarryManager.RegisterDropCallback(thisEntity, function(playerEnt, usingHand, prop) CheckDropped(playerEnt, usingHand, prop) end )
-
 end
 
 
@@ -168,6 +214,7 @@ function OnPickedUp(player, hand)
 	usingHand = hand
 	otherHand = playerEnt:GetHMDAvatar():GetVRHand(usingHand:GetHandID() == 0 and 1 or 0)
 	handID = usingHand:GetHandID()
+	dropGuard:SetAbsScale(1)
 
 	if not bowView then
 		SpawnViewModel()
@@ -208,6 +255,7 @@ function OnDropped()
 	usingHand = nil
 	handID = -1
 	held = false
+	dropGuard:SetAbsScale(0.01)
 
 	bowString:AddEffects(32) --EF_NODRAW
 
@@ -309,7 +357,7 @@ function BowThink()
 		local pivotOrigin = thisEntity:GetAttachmentOrigin(idx)
 		local grabPos = otherHand:TransformPointEntityToWorld(stringGrabPos)
 
-		--DebugDrawLine(pivotOrigin, grabPos, 0, 255, 0, false, THINK_INTERVAL)
+		--DebugDrawLine(pivotOrigin, grabPos, 0, 255, 0, false, FrameTime() * THINK_INTERVAL)
 
 		local drawVec = (pivotOrigin - grabPos)
 		local drawLength = drawVec:Length()
@@ -342,7 +390,7 @@ function BowThink()
 		end
 	end
 
-	return THINK_INTERVAL
+	return FrameTime() * THINK_INTERVAL
 end
 
 
@@ -369,7 +417,7 @@ function CheckArrows()
 	local idx = bowView:ScriptLookupAttachment("arrow_back")
 	local stringPos = bowView:GetAttachmentOrigin(idx)
 
-	--DebugDrawLine(propNockOrigin, stringPos, 0, 0, 255, false, THINK_INTERVAL)
+	--DebugDrawLine(propNockOrigin, stringPos, 0, 0, 255, false, FrameTime() * THINK_INTERVAL)
 
 	local propDist = (stringPos - propNockOrigin):Length()
 
@@ -536,7 +584,9 @@ function FireArrow()
 		massFac = (1 - arrowMass * 0.5 / (arrowMass * 0.5 + 1))
 	end
 
-	otherHand:FireHapticPulse(2)
+	if otherHand then
+		otherHand:FireHapticPulse(2)
+	end
 	thisEntity:SetThink(FireRumble, "fire_rumble", 0.0)
 
 	local idx = bowView:ScriptLookupAttachment("arrow_fire_pos")

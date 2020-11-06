@@ -1,0 +1,198 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "lod0"
+						filename = "models/weapons/gatling_gun/gatling_gun.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"gatling_gun_body",
+								"gatling_gun_handle",
+								"gatling_gun_crank",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "lod1"
+						filename = "models/weapons/gatling_gun/gatling_gun_lod1.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"gatling_gun_body_002",
+								"gatling_gun_handle_002",
+								"gatling_gun_crank_002",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "lod2"
+						filename = "models/weapons/gatling_gun/gatling_gun_lod2.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"gatling_gun_crank_003",
+								"gatling_gun_handle_003",
+								"gatling_gun_body_003",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "idle"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/gatling_gun/gatling_gun.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "interact_action"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/gatling_gun/anims/interact_action.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "barrel_forward"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/gatling_gun/anims/interact_action.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "barrel_backward"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/gatling_gun/anims/interact_action.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = true
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "BoneMarkupList"
+				children = 
+				[
+					{
+						_class = "BoneMarkup"
+						target_bone = "weapon"
+						ignore_Translation = false
+						ignore_rotation = false
+						do_not_discard = false
+					},
+				]
+				bone_cull_type = "Leaf Only"
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"lod0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 20.0
+						meshes = 
+						[
+							"lod1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 45.0
+						meshes = 
+						[
+							"lod2",
+						]
+					},
+				]
+			},
+		]
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
+		anim_graph_name = "animgraphs/gatling_gun_interact.vanmgrph"
+	}
+}

@@ -103,6 +103,29 @@ local items =
 		vscripts = "headcrab_ragdoll";
 		targetname = "floor_chicken";
 	};
+	
+	prop_beanball =
+	{
+		classname = "prop_physics";
+		model = "models/props_food/baked_bean_ball.vmdl";
+		targetname = "baked_bean_ball";
+	};
+	
+	weapon_gatling_gun =
+	{
+		classname = "prop_physics";
+		vscripts = "weapon_gatling_gun_phys";
+		model = "models/weapons/gatling_gun/gatling_gun.vmdl";
+		targetname = "gatling_gun";
+	};
+	
+	weapon_mac10_beans =
+	{
+		classname = "prop_physics";
+		vscripts = "weapon_mac10_beans";
+		model = "models/weapons/mac10/mac10_frame.vmdl";
+		targetname = "mac10_beans";
+	};
 }
 
 

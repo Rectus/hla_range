@@ -1,5 +1,5 @@
 
-local THINK_INTERVAL = FrameTime()
+local THINK_INTERVAL = 1
 local DECAY_TIME = 60
 local DAMAGE_MIN = 2
 local DAMAGE_MAX = 50
@@ -39,13 +39,15 @@ function EnableDamage(usingPlayer)
 	user = usingPlayer
 	tracing = true
 	thisEntity:SetThink(ArrowDecay, "decay", DECAY_TIME)
-	thisEntity:SetThink(ArrowThink, "think", THINK_INTERVAL)
+	thisEntity:SetThink(ArrowThink, "think", FrameTime() * THINK_INTERVAL)
 	ArrowThink(thisEntity, true)
 end
 
 function ArrowThink(ent, ignoreSpeed)
 
 	if not tracing then return end
+	
+	local deltaT = FrameTime() * THINK_INTERVAL
 
 	local idx = thisEntity:ScriptLookupAttachment("tip")
 	local tipOrigin = thisEntity:GetAttachmentOrigin(idx)
@@ -70,7 +72,7 @@ function ArrowThink(ent, ignoreSpeed)
 	local traceTable =
 	{
 		startpos = tipOrigin ;
-		endpos = tipOrigin + velocity * THINK_INTERVAL * 1.5;
+		endpos = tipOrigin + velocity * deltaT * 1.5;
 		ignore = thisEntity
 
 	}
@@ -92,7 +94,7 @@ function ArrowThink(ent, ignoreSpeed)
 			DestroyDamageInfo(dmg)
 			if IsValidEntity(traceTable.enthit) and traceTable.enthit:IsAlive()
 			then
-				thisEntity:SetAbsOrigin(thisEntity:GetAbsOrigin() + tipDir * traceTable.fraction * speed * THINK_INTERVAL * 1.5 + tipDir * 5)
+				thisEntity:SetAbsOrigin(thisEntity:GetAbsOrigin() + tipDir * traceTable.fraction * speed * deltaT * 1.5 + tipDir * 5)
 				thisEntity:SetParent(traceTable.enthit, CheckParentAttachment(traceTable.enthit))
 			else
 				thisEntity:ApplyAbsVelocityImpulse(-velocity * thisEntity:GetMass())
@@ -101,10 +103,10 @@ function ArrowThink(ent, ignoreSpeed)
 				return nil
 			end
 		else
-			thisEntity:SetAbsOrigin(thisEntity:GetAbsOrigin() + tipDir * traceTable.fraction * speed * THINK_INTERVAL * 1.5 + tipDir * 5)
+			thisEntity:SetAbsOrigin(thisEntity:GetAbsOrigin() + tipDir * traceTable.fraction * speed * deltaT * 1.5 + tipDir * 5)
 			EntFireByHandle(thisEntity, thisEntity, "Sleep")
 		end
-		--thisEntity:SetAbsOrigin(thisEntity:GetAbsOrigin() + tipDir * traceTable.fraction * speed * THINK_INTERVAL * 1.5 + tipDir * 5)
+		--thisEntity:SetAbsOrigin(thisEntity:GetAbsOrigin() + tipDir * traceTable.fraction * speed * deltaT * 1.5 + tipDir * 5)
 
 		StartSoundEvent("Custom_Weapon.Bow_Arrow_Impact", thisEntity)
 		tracing = false
@@ -117,12 +119,12 @@ function ArrowThink(ent, ignoreSpeed)
 		local forwardFactor = RemapVal(velocity:Dot(tipDir), 0, 1, 1, 0) / speed
 		local torqueAxis = velocity:Cross(tipDir)
 
-		--DebugDrawLine(tipOrigin, tipOrigin + torqueAxis * forwardFactor *100, 0, 255, 0, false, THINK_INTERVAL)
+		--DebugDrawLine(tipOrigin, tipOrigin + torqueAxis * forwardFactor *100, 0, 255, 0, false, deltaT)
 		
-		SetPhysAngularVelocity(thisEntity, GetPhysAngularVelocity(thisEntity) + torqueAxis * forwardFactor * THINK_INTERVAL * DRAG_TORQUE_FACTOR)
+		SetPhysAngularVelocity(thisEntity, GetPhysAngularVelocity(thisEntity) + torqueAxis * forwardFactor * deltaT * DRAG_TORQUE_FACTOR)
 	end
 
-	return THINK_INTERVAL
+	return deltaT
 end
 
 function ArrowDecay()

@@ -5,6 +5,8 @@ local fired = false
 
 local animParts = nil
 local tubeEnt = nil
+local dropGuard = nil
+local safetyEnt = nil
 
 local rocketKeyvals =
 {
@@ -208,24 +210,85 @@ function Precache(context)
 
 	PrecacheResource("particle", "particles/weapons/law_backblast_smoke.vpcf", context)
 	PrecacheResource("particle", "particles/weapons/law_rocket_smoke.vpcf", context)
+	PrecacheResource("model", "models/weapons/law_weapon_dropguard.vmdl", context)
+	
 end
 
 
-function Activate(aType)
+function Activate(activateType)
 
 	--thisEntity:SetEntityName(UniqueString("law"))
 
-	for _, keyVals in pairs(partsKeyVals) do
 
-		keyVals.origin = thisEntity:GetAbsOrigin()
-		keyVals.angles = thisEntity:GetAngles()
-		local scale = thisEntity:GetAbsScale()
-		keyVals.scales = Vector(scale, scale, scale)
+	if activateType == ACTIVATE_TYPE_ONRESTORE -- on game load
+	then		
+		-- Hack to properly handle restoration from saves, 
+		-- since variables written by Activate() on restore don't end up in the script scope.
+		EntFireByHandle(thisEntity, thisEntity, "CallScriptFunction", "RestoreState")
+	
+	else
 
+		for _, keyVals in pairs(partsKeyVals) do
+
+			keyVals.origin = thisEntity:GetAbsOrigin()
+			keyVals.angles = thisEntity:GetAngles()
+			local scale = thisEntity:GetAbsScale()
+			keyVals.scales = Vector(scale, scale, scale)
+
+		end
+
+		SpawnEntityListFromTableAsynchronous(partsKeyVals, OnPartsSpawned)
+
+		local entKeyvals =
+		{
+			model = "models/weapons/law_weapon_dropguard.vmdl";
+			interactAs = "player";
+			solid = 6;
+			origin = thisEntity:GetAbsOrigin();
+			angles = thisEntity:GetAngles();
+			targetname = "law_dropguard";
+		}
+		
+		dropGuard = SpawnEntityFromTableSynchronous("prop_dynamic", entKeyvals)
+		dropGuard:SetParent(thisEntity, "")
+		dropGuard:SetAbsScale(0.01)
 	end
 
-	SpawnEntityListFromTableAsynchronous(partsKeyVals, OnPartsSpawned)
+end
 
+
+function RestoreState()
+
+	local children = thisEntity:GetChildren()
+	for idx, child in pairs(children) do
+		if child:GetName() == "law_details" then
+			animParts = child
+			
+		elseif child:GetName() == "law_tube" then
+			tubeEnt = child
+			
+			if tubeEnt:GetCycle() > 0.99 then
+				extended = true
+			end
+			
+		elseif child:GetName() == "law_dropguard" then
+			dropGuard = child
+		
+		elseif child:GetName() == "law_safety" then
+			safetyEnt = child
+			
+			if safetyEnt:GetCycle() > 0.99 then
+				safety = false
+			end
+		end
+	end
+	
+	if thisEntity:Attribute_GetIntValue("fired", 0) == 1 then
+		fired = true
+		if animParts then
+			animParts:SetBodygroupByName("rocket", 1)
+		end
+	end
 end
 
 
@@ -253,6 +316,7 @@ function OnPartsSpawned(partList)
 			ent:RedirectOutput("OnCompletionA", "OnTriggerPulled", thisEntity)
 
 		elseif ent:GetName() == "law_safety" then
+			safetyEnt = ent
 			ent:RedirectOutput("OnCompletionA", "SafetyDisengaged", thisEntity)
 			ent:RedirectOutput("OnCompletionB", "SafetyEngaged", thisEntity)
 
@@ -307,6 +371,8 @@ function OnExtended(params)
 		--tubeEnt:Kill()
 		EntFireByHandle(thisEntity, tubeEnt, "Lock")
 	end
+	
+	dropGuard:SetAbsScale(1)
 
 	--thisEntity:SetModel("models/weapons/law_weapon_base_extended.vmdl")
 
@@ -363,6 +429,8 @@ function Fire(user)
 	if animParts then
 		animParts:SetBodygroupByName("rocket", 1)
 	end
+	
+	thisEntity:Attribute_SetIntValue("fired", 1)
 
 	local attachment = thisEntity:ScriptLookupAttachment("rocket_spawn")
 	local fireDir = thisEntity:GetAttachmentForward(attachment)

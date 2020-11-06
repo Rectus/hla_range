@@ -1,0 +1,322 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "prop_data"
+						game_keys = 
+						{
+							base = ""
+							allowstatic = false
+							bakelighting = true
+							damage_table = ""
+							"dmg.bullets" = -1.0
+							"dmg.club" = -1.0
+							"dmg.explosive" = -1.0
+							"dmg.fire" = -1.0
+							health = -1.0
+							spawn_motion_disabled = false
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "cylinder_idle"
+							pose_special_type = "0"
+							conform_fingers = false
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ -0.265836, 0.012076, 6.2622 ]
+							angles_left = [ 0.0, 0.0, 90.7891 ]
+							origin_right = [ -0.265836, 0.281843, 6.2622 ]
+							angles_right = [ -0.0, -0.0, -90.7891 ]
+							max_distance = 6.0
+							finger_thumb = 0.919216
+							finger_pinky = 0.997463
+							finger_ring = 0.95942
+							finger_middle = 0.929173
+							finger_index = 0.989669
+							has_extent = true
+							show_extent_helper = false
+							extent_origin_left = [ -0.273828, 1.75441, 6.28379 ]
+							extent_origin_min_left = [ -0.29886, -2.3499, 6.24308 ]
+							extent_origin_right = [ -0.264832, -1.69842, 6.30112 ]
+							extent_origin_min_right = [ -0.227426, 1.78029, 6.27561 ]
+							has_rotation = true
+							rotation_axis0 = [ -0.309456, -2.27397, 5.52702 ]
+							rotation_axis1 = [ -0.309456, 2.04161, 5.51131 ]
+							rotation_min = 180.0
+							rotation_max = 45.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "vr_carry_type"
+						game_keys = 
+						{
+							carry_type = "3"
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "idle"
+							pose_special_type = "0"
+							conform_fingers = false
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ -14.4073, 0.367426, 0.485169 ]
+							angles_left = [ 72.059494, 0.0, 0.0 ]
+							origin_right = [ -14.4073, -0.367426, 0.485169 ]
+							angles_right = [ 72.0595, 0.0, 0.0 ]
+							max_distance = 3.0
+							finger_thumb = 0.616271
+							finger_pinky = 0.453451
+							finger_ring = 0.43281
+							finger_middle = 0.515748
+							finger_index = 0.546583
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.0, -0.0, -2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, 0.0, -2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = true
+							rotation_axis0 = [ -10.0, 0.0, 0.0 ]
+							rotation_axis1 = [ -20.0, 0.0, 0.0 ]
+							rotation_min = 180.0
+							rotation_max = 180.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsHullFile"
+						name = "gatling_gun"
+						disabled = true
+						parent_bone = ""
+						surface_prop = "prop.metal_heavy_misc"
+						collision_prop = "default"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						filename = "models/weapons/gatling_gun/gatling_gun.dmx"
+						import_scale = 1.0
+						faceMergeAngle = 10.0
+						maxHullVertices = 0
+						import_mode = "HullPerElement"
+						optimization_algorithm = "QEM"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"gatling_gun_crank",
+							]
+						}
+					},
+					{
+						_class = "PhysicsHullFile"
+						name = "gatling_gun_collision"
+						parent_bone = ""
+						surface_prop = "prop.metal_heavy_misc"
+						collision_prop = "default"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						filename = "models/weapons/gatling_gun/gatling_gun_collision.dmx"
+						import_scale = 1.0
+						faceMergeAngle = 10.0
+						maxHullVertices = 0
+						import_mode = "HullPerElement"
+						optimization_algorithm = "QEM"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"gatling_gun_crank_hull_7",
+								"gatling_gun_crank_hull_4",
+								"gatling_gun_crank_hull_3",
+								"gatling_gun_crank_hull_2",
+								"gatling_gun_barrels_hull_2",
+								"gatling_gun_barrels_hull_1",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "muzzle"
+						parent_bone = "muzzle"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "shell_eject"
+						parent_bone = "shell_eject"
+						relative_origin = [ -0.177284, -0.839205, 0.346188 ]
+						relative_angles = [ -1.448963, 12.532834, -65.873955 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "bullet_origin"
+						parent_bone = "bullet_origin"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "chamber"
+						parent_bone = "muzzle"
+						relative_origin = [ -14.83835, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "load"
+						parent_bone = "weapon"
+						relative_origin = [ 9.489933, 1.874601, -1.965763 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "lod0"
+						filename = "models/weapons/gatling_gun/gatling_gun.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"gatling_gun_barrels",
+								"gatling_gun_crank",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "lod1"
+						filename = "models/weapons/gatling_gun/gatling_gun_lod1.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"gatling_gun_crank_002",
+								"gatling_gun_barrels_002",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "lod2"
+						filename = "models/weapons/gatling_gun/gatling_gun_lod2.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"gatling_gun_crank_003",
+								"gatling_gun_barrels_003",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsBodyMarkupList"
+				children = 
+				[
+					{
+						_class = "PhysicsBodyMarkup"
+						target_body = "undefined"
+						mass_override = 25.0
+						inertia_scale = 1.0
+						linear_damping = 0.0
+						angular_damping = 0.0
+						use_mass_center_override = false
+						mass_center_override = [ 0.0, 0.0, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"lod0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 20.0
+						meshes = 
+						[
+							"lod1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 45.0
+						meshes = 
+						[
+							"lod2",
+						]
+					},
+				]
+			},
+		]
+		model_archetype = "physics_prop_model"
+		primary_associated_entity = "prop_physics"
+		anim_graph_name = ""
+	}
+}

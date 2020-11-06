@@ -1,0 +1,110 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCapsule"
+						name = "charge_handle"
+						parent_bone = "bolt"
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 0.38
+						point0 = [ 0.0, 0.017027, 0.0 ]
+						point1 = [ 0.0, 0.497691, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "mac10"
+						disabled = true
+						filename = "models/weapons/mac10/mac10_animated.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "charge_handle"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/mac10/anims/charge_handle.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "gun"
+						children = 
+						[
+							{
+								_class = "Bone"
+								name = "bolt"
+								origin = [ 0.0, 0.0, 0.0 ]
+								angles = [ 0.0, 0.0, 0.0 ]
+							},
+						]
+						origin = [ 0.0, 0.0, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "BoneMarkupList"
+				bone_cull_type = "None"
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "RenameBone"
+						original_bone_name = "bolt"
+						new_bone_name = "bolt_charge"
+					},
+				]
+			},
+		]
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
+		anim_graph_name = ""
+	}
+}

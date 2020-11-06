@@ -1,0 +1,52 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "vr_parallax_occlusion.vfx"
+
+	//---- Ambient Occlusion ----
+	TextureAmbientOcclusion "[1.000000 1.000000 1.000000 0.000000]"
+
+	//---- Color ----
+	g_flModelTintAmount "1.000"
+	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
+	TextureColor "materials/food/baked_beans_color.png"
+
+	//---- Fade ----
+	g_flFadeExponent "1.000"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Lighting ----
+	g_flDirectionalLightmapMinZ "0.050"
+	g_flDirectionalLightmapStrength "1.000"
+
+	//---- Metalness ----
+	TextureMetalness "[0.092000 0.092000 0.092000 0.000000]"
+
+	//---- Normal ----
+	TextureNormal "materials/food/baked_beans_normal.png"
+
+	//---- Parallax ----
+	g_flHeightMapScale "0.081"
+	g_nLODThreshold "5"
+	g_nMaxSamples "40"
+	g_nMinSamples "8"
+	TextureHeight "materials/food/baked_beans_height.png"
+
+	//---- Roughness ----
+	TextureRoughness "materials/food/baked_beans_rough.png"
+
+	//---- Texture Coordinates ----
+	g_nScaleTexCoordUByModelScaleAxis "0"
+	g_nScaleTexCoordVByModelScaleAxis "0"
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+	g_vTexCoordScrollSpeed "[0.000 0.000]"
+
+	SystemAttributes
+	{
+		PhysicsSurfaceProperties "world.water_shallow"
+	}
+}

@@ -36,6 +36,8 @@ local loadedShellPower = 1.0
 local loadedShellEnt = nil
 local boltEnt = nil
 local triggerEnt = nil
+local dropGuard = nil
+local buttonEnt = nil
 
 local lightEnt = nil
 local lightOn = false
@@ -251,42 +253,88 @@ function Precache(context)
 	PrecacheModel(BOLT_KEYVALS.model, context)
 	PrecacheModel(TRIGGER_KEYVALS.model, context)
 	PrecacheModel(LIGHT_BUTTON_KEYVALS.model, context)
+	PrecacheModel("models/weapons/pipe_shotgun/pipe_shotgun_dropguard.vmdl", context)
+	
 end
 
 
-function Activate(aType)
+function Activate(activateType)
 
 	if not g_PropCarryManager then
 		SpawnEntityFromTableSynchronous("logic_script", {vscripts = "prop_carry_manager"})
 	end
+	
+	if activateType == ACTIVATE_TYPE_ONRESTORE -- on game load
+	then		
+		-- Hack to properly handle restoration from saves, 
+		-- since variables written by Activate() on restore don't end up in the script scope.
+		EntFireByHandle(thisEntity, thisEntity, "CallScriptFunction", "RestoreState")
+	
+	else
+		g_PropCarryManager.RegisterPickupCallback(thisEntity, function(playerEnt, usingHand, prop) CheckPickedUp(playerEnt, usingHand, prop) end )
+		g_PropCarryManager.RegisterDropCallback(thisEntity, function(playerEnt, usingHand, prop) CheckDropped(playerEnt, usingHand, prop) end )
+	
+		boltEnt = SpawnEntityFromTableSynchronous(BOLT_KEYVALS.classname, BOLT_KEYVALS)
+		boltEnt:SetParent(thisEntity, "")
+		boltEnt:SetLocalOrigin(Vector(0,0,0))
+		boltEnt:SetLocalAngles(0,0,0)
+		boltEnt:RedirectOutput("Position", "UpdateBolt", thisEntity)
+		
+		triggerEnt = SpawnEntityFromTableSynchronous(TRIGGER_KEYVALS.classname, TRIGGER_KEYVALS)
+		triggerEnt:SetParent(thisEntity, "")
+		triggerEnt:SetLocalOrigin(Vector(0,0,0))
+		triggerEnt:SetLocalAngles(0,0,0)
+		triggerEnt:RedirectOutput("OnCompletionA_Forward", "OnTrigger", thisEntity)
+		
+		buttonEnt = SpawnEntityFromTableSynchronous(LIGHT_BUTTON_KEYVALS.classname, LIGHT_BUTTON_KEYVALS)
+		buttonEnt:SetParent(thisEntity, "")
+		buttonEnt:SetLocalOrigin(Vector(0,0,0))
+		buttonEnt:SetLocalAngles(0,0,0)
+		buttonEnt:RedirectOutput("OnCompletionA_Forward", "ToggleLight", thisEntity)
+		
+		local entKeyvals =
+		{
+			model = "models/weapons/pipe_shotgun/pipe_shotgun_dropguard.vmdl";
+			interactAs = "player";
+			solid = 6;
+			origin = thisEntity:GetAbsOrigin();
+			angles = thisEntity:GetAngles();
+			targetname = "pipe_shotgun_dropguard";
+		}
+		
+		dropGuard = SpawnEntityFromTableSynchronous("prop_dynamic", entKeyvals)
+		dropGuard:SetParent(thisEntity, "")
+		dropGuard:SetAbsScale(0.01)
+	end
+end
 
-	g_PropCarryManager.RegisterPickupCallback(thisEntity, function(playerEnt, usingHand, prop) CheckPickedUp(playerEnt, usingHand, prop) end )
-	g_PropCarryManager.RegisterDropCallback(thisEntity, function(playerEnt, usingHand, prop) CheckDropped(playerEnt, usingHand, prop) end )
-	
-	
-	-- Make sure there aren't any old children left on load.
-	for _, ent in pairs(thisEntity:GetChildren()) do
-		ent:Kill()
+
+function RestoreState()
+
+	local children = thisEntity:GetChildren()
+	for idx, child in pairs(children) do
+		if child:GetName() == "pipe_shotgun_bolt" then
+			boltEnt = child
+			
+		elseif child:GetName() == "pipe_shotgun_trigger" then
+			triggerEnt = child
+			
+		elseif child:GetName() == "pipe_shotgun_light" then
+			lightEnt = child
+			
+		elseif child:GetName() == "pipe_shotgun_dropguard" then
+			dropGuard = child
+			
+		elseif child:GetName() == "pipe_shotgun_button" then
+			buttonEnt = child
+			
+		else
+			child:Kill()
+		end
 	end
 	
-	boltEnt = SpawnEntityFromTableSynchronous(BOLT_KEYVALS.classname, BOLT_KEYVALS)
-	boltEnt:SetParent(thisEntity, "")
-	boltEnt:SetLocalOrigin(Vector(0,0,0))
-	boltEnt:SetLocalAngles(0,0,0)
-	boltEnt:RedirectOutput("Position", "UpdateBolt", thisEntity)
-	
-	triggerEnt = SpawnEntityFromTableSynchronous(TRIGGER_KEYVALS.classname, TRIGGER_KEYVALS)
-	triggerEnt:SetParent(thisEntity, "")
-	triggerEnt:SetLocalOrigin(Vector(0,0,0))
-	triggerEnt:SetLocalAngles(0,0,0)
-	triggerEnt:RedirectOutput("OnCompletionA_Forward", "OnTrigger", thisEntity)
-	
-	local buttonEnt = SpawnEntityFromTableSynchronous(LIGHT_BUTTON_KEYVALS.classname, LIGHT_BUTTON_KEYVALS)
-	buttonEnt:SetParent(thisEntity, "")
-	buttonEnt:SetLocalOrigin(Vector(0,0,0))
-	buttonEnt:SetLocalAngles(0,0,0)
-	buttonEnt:RedirectOutput("OnCompletionA_Forward", "ToggleLight", thisEntity)
-
+	g_PropCarryManager.RegisterPickupCallback(thisEntity, function(playerEnt, usingHand, prop) CheckPickedUp(playerEnt, usingHand, prop) end )
+	g_PropCarryManager.RegisterDropCallback(thisEntity, function(playerEnt, usingHand, prop) CheckDropped(playerEnt, usingHand, prop) end )
 end
 
 
@@ -306,6 +354,7 @@ function OnPickedUp(player, hand)
 	user = player
 	usingHand = hand
 	held = true
+	dropGuard:SetAbsScale(1)
 	
 	thisEntity:SetThink(CheckLoad, "load", 0)
 end
@@ -319,6 +368,9 @@ end
 
 
 function OnDropped()
+
+	dropGuard:SetAbsScale(0.01)
+
 	user = nil
 	usingHand = nil
 	held = false

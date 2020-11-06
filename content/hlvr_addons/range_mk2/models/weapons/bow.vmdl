@@ -118,327 +118,445 @@
 				children = 
 				[
 					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull0_shape",
-							]
-						}
-					},
-					{
-						_class = "PhysicsHullFile"
+						_class = "Folder"
+						name = "old"
+						children = 
+						[
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull0_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								disabled = true
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull1_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull2_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull3_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull4_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull5_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull6_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull7_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull8_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull9_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull10_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull11_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull12_shape",
+									]
+								}
+							},
+							{
+								_class = "PhysicsHullFile"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								recenter_on_parent_bone = true
+								offset_origin = [ 0.0, 0.0, 0.0 ]
+								offset_angles = [ 0.0, 0.0, 0.0 ]
+								filename = "models\\weapons\\bow_physshapes.dmx"
+								import_scale = 1.0
+								faceMergeAngle = 10.0
+								maxHullVertices = 0
+								import_mode = "SingleHull"
+								optimization_algorithm = "QEM"
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"hull13_shape",
+									]
+								}
+							},
+						]
 						disabled = true
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull1_shape",
-							]
-						}
 					},
 					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull2_shape",
-							]
-						}
+						_class = "Folder"
+						name = "center"
+						children = 
+						[
+							{
+								_class = "PhysicsShapeBox"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								origin = [ 9.070329, 0.000152, 6.522508 ]
+								angles = [ -1.406937, 0.0, 0.0 ]
+								dimensions = [ 1.653122, 1.506481, 2.772376 ]
+							},
+							{
+								_class = "PhysicsShapeBox"
+								name = "_copy1"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								origin = [ 9.278503, -0.024888, -3.903266 ]
+								angles = [ 5.642899, 0.0, 0.0 ]
+								dimensions = [ 1.816274, 1.464743, 8.519872 ]
+							},
+							{
+								_class = "PhysicsShapeBox"
+								name = "_copy1_copy"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								origin = [ 9.407131, -0.337031, 2.690943 ]
+								angles = [ -6.387344, 0.0, 0.0 ]
+								dimensions = [ 1.804213, 0.840458, 5.046317 ]
+							},
+						]
 					},
 					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull3_shape",
-							]
-						}
+						_class = "Folder"
+						name = "top"
+						children = 
+						[
+							{
+								_class = "PhysicsShapeBox"
+								name = "_copy"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								origin = [ 8.78579, -0.014905, 11.633991 ]
+								angles = [ -11.873292, 0.0, 0.0 ]
+								dimensions = [ 0.476797, 1.324799, 7.650411 ]
+							},
+							{
+								_class = "PhysicsShapeBox"
+								name = "_copy_copy"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								origin = [ 4.209505, -0.002271, 21.026783 ]
+								angles = [ -35.446793, 0.0, 0.0 ]
+								dimensions = [ 0.423943, 1.101036, 12.75882 ]
+							},
+							{
+								_class = "PhysicsShapeBox"
+								name = "_copy_copy_copy"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								origin = [ 0.414521, 0.001357, 28.394106 ]
+								angles = [ -1.818635, 0.0, 0.0 ]
+								dimensions = [ 0.423943, 0.708093, 4.599026 ]
+							},
+						]
 					},
 					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull4_shape",
-							]
-						}
-					},
-					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull5_shape",
-							]
-						}
-					},
-					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull6_shape",
-							]
-						}
-					},
-					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull7_shape",
-							]
-						}
-					},
-					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull8_shape",
-							]
-						}
-					},
-					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull9_shape",
-							]
-						}
-					},
-					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull10_shape",
-							]
-						}
-					},
-					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull11_shape",
-							]
-						}
-					},
-					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull12_shape",
-							]
-						}
-					},
-					{
-						_class = "PhysicsHullFile"
-						parent_bone = ""
-						surface_prop = "prop.wood_small"
-						collision_prop = "default"
-						recenter_on_parent_bone = true
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "models\\weapons\\bow_physshapes.dmx"
-						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "SingleHull"
-						optimization_algorithm = "QEM"
-						import_filter = 
-						{
-							exclude_by_default = true
-							exception_list = 
-							[
-								"hull13_shape",
-							]
-						}
+						_class = "Folder"
+						name = "bottom"
+						children = 
+						[
+							{
+								_class = "PhysicsShapeBox"
+								name = "_copy_copy_copy_copy"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								origin = [ 0.486406, 0.001357, -28.495264 ]
+								angles = [ 3.552003, 0.0, 0.0 ]
+								dimensions = [ 0.423943, 0.708093, 4.681243 ]
+							},
+							{
+								_class = "PhysicsShapeBox"
+								name = "_copy_copy_copy1"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								origin = [ 4.209505, -0.006011, -21.018353 ]
+								angles = [ 34.24527, 0.0, 0.0 ]
+								dimensions = [ 0.423943, 1.108516, 12.75882 ]
+							},
+							{
+								_class = "PhysicsShapeBox"
+								name = "_copy_copy1"
+								parent_bone = ""
+								surface_prop = "prop.wood_small"
+								collision_prop = "default"
+								origin = [ 8.666494, -0.014905, -11.96245 ]
+								angles = [ 13.373841, 0.0, 0.0 ]
+								dimensions = [ 0.476797, 1.324799, 7.844723 ]
+							},
+						]
 					},
 				]
 			},

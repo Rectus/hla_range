@@ -1,0 +1,80 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = ""
+						surface_prop = "default_silent"
+						collision_prop = "default"
+						radius = 0.922971
+						point0 = [ -5.842374, 0.072217, 0.034762 ]
+						point1 = [ 9.27862, 0.072217, 0.034762 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy"
+						parent_bone = ""
+						surface_prop = "default_silent"
+						collision_prop = "default"
+						origin = [ 5.359494, 3.018052, -0.885751 ]
+						angles = [ -0.0, 3.276795, 0.0 ]
+						dimensions = [ 3.174712, 10.205489, 2.121718 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						name = "_copy1"
+						parent_bone = ""
+						surface_prop = "default_silent"
+						collision_prop = "default"
+						radius = 1.216701
+						point0 = [ 6.118628, 1.418776, 0.331065 ]
+						point1 = [ 10.052544, 1.645791, 0.331065 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderPrimitiveBox"
+						name = "box"
+						disabled = true
+						parent_bone = ""
+						material_name = "dev/helper/testgrid.vmat"
+						origin = [ -2.31397, -0.043801, 0.294395 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						max_u = 1.0
+						max_v = 1.0
+						dimensions = [ 25.9039, 10.0978, 5.800194 ]
+						segments_x = 1
+						segments_y = 1
+						segments_z = 1
+					},
+					{
+						_class = "RenderMeshFile"
+						disabled = true
+						filename = "models/weapons/pipe_shotgun/pipe_shotgun_base.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
+		anim_graph_name = ""
+	}
+}

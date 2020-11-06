@@ -113,6 +113,14 @@ function Activate(aType)
 	_G.g_PropCarryManager.GetPropInHand = function(player, hand) return GetPropInHand(player, hand) end
 	_G.g_PropCarryManager.GetAllHeldProps = function(player, hand) return GetAllHeldProps() end
 
+	-- Hack to properly handle restoration from saves, 
+	-- since think calls by Activate() on restore break.
+	EntFireByHandle(thisEntity, thisEntity, "CallScriptFunction", "SetupState")
+end
+
+
+function SetupState()
+	
 
 	Convars:RegisterCommand("prop_carry_debug", ToggleDebug, "Toggle debug display of the custom prop carry manager.", 0)
 
@@ -136,8 +144,12 @@ function PropPickedUpInput(params)
 
 	local prop = params.caller
 	local playerEnt = params.activator
-	if not prop or not PHYS_ENTITIES[prop:GetClassname()]
-		or not playerEnt or not playerEnt:GetHMDAvatar() then return end
+	if not prop or not PHYS_ENTITIES[prop:GetClassname()] or not playerEnt then return end
+	
+	if not playerEnt:GetHMDAvatar() then
+		Warning("prop_carry_manager: Player without HMD Avatar!\n")
+		return
+	end
 
 	for idx, event in ipairs(pendingEvents) do
 		if Time() > event.time + EVENT_MAX_PENDING then
@@ -156,13 +168,53 @@ end
 
 function PropPickedUpEvent(ent, params)
 
-	--for k, v in pairs(params) do print(k .. ": " .. tostring(v)) end
+	if not PHYS_ENTITIES[params.item] then
+		return
+	end
+
 
 	local playerEnt = PlayerInstanceFromIndex(params.userid)
+	
+	if not playerEnt:GetHMDAvatar() then
+		Warning("prop_carry_manager: Player without HMD Avatar!\n")
+		return
+	end
+
+	local hand = nil
 
 	-- The hand IDs seem to match tip attachments 1 and 2 repectively
-	local handID = params.vr_tip_attachment == 1 and 1 or 0
-	local hand = playerEnt:GetHMDAvatar():GetVRHand(handID)
+	if params.vr_tip_attachment == 1 then
+	
+		hand = playerEnt:GetHMDAvatar():GetVRHand(1)
+	
+	elseif params.vr_tip_attachment == 2 then
+	
+		hand = playerEnt:GetHMDAvatar():GetVRHand(0)
+	end
+
+	if not hand then
+		
+		local conType = playerEnt:GetVRControllerType()
+	
+		local text = "prop_carry_manager: Player hand entity not found! Controller type: " 
+			.. tostring(conType) .. ", Tip attachment: " .. tostring(params.vr_tip_attachment) .. "\n"
+		Warning(text)
+		DebugDrawText(playerEnt:GetHMDAvatar():GetVRHand(0):GetAbsOrigin(), text, false, 10)
+		return
+	end
+
+	if debugEnabled then
+		local handSide = (hand:GetHandID() == 1) and "Right" or "Left"
+		local text = "item_pickup:\nplayer: " .. playerEnt:GetUserID() .. 
+			"\nhand: " .. handSide .. " (" .. hand:GetHandID() .. 
+			")\nhand type: " .. hand:GetLiteralHandType() .. "\n\n" 
+
+		for k, v in pairs(params) do 
+			text = text .. k .. ": " .. tostring(v) .. "\n" 
+		end
+		
+		DebugDrawText(hand:GetAbsOrigin(), text, false, 10)
+	end
 
 	-- No outputs on ragdolls, so approximate
 	if APPROX_ENTITIES[params.item] then
@@ -206,6 +258,9 @@ function PropPickedUp(prop, playerEnt, usingHand)
 	for ent, func in pairs(pickupCallbacks) do
 		if IsValidEntity(ent) then func(playerEnt, usingHand, prop) end
 	end
+	
+	--local data = {player = playerEnt,hand = usingHand, prop = prop}
+	--CustomGameEventManager:Send_ServerToAllClients("prop_carry_manager_pickup", data)
 end
 
 
@@ -213,11 +268,33 @@ function PropDropped(ent, params)
 
 	local playerEnt = PlayerInstanceFromIndex(params.userid)
 
-	if not playerEnt or not playerEnt:GetHMDAvatar() then return end
+	if not playerEnt then return end
+	
+	if not playerEnt:GetHMDAvatar() then
+		Warning("prop_carry_manager: Player without HMD Avatar!\n")
+		return
+	end
+
+	local hand = nil
 
 	-- The hand IDs seem to match tip attachments 1 and 2 repectively
-	local handID = params.vr_tip_attachment == 1 and 1 or 0
-	local hand = playerEnt:GetHMDAvatar():GetVRHand(handID)
+	if params.vr_tip_attachment == 1 then
+	
+		hand = playerEnt:GetHMDAvatar():GetVRHand(1)
+	
+	elseif params.vr_tip_attachment == 2 then
+	
+		hand = playerEnt:GetHMDAvatar():GetVRHand(0)
+	end
+
+	if not hand then
+		
+		local conType = playerEnt:GetVRControllerType()
+	
+		Warning("prop_carry_manager: Player hand entity not found! Controller type: " 
+			.. conType .. ", Tip attachment: " .. params.vr_tip_attachment .. "\n")
+		return
+	end
 
 	if playerList[playerEnt] and playerList[playerEnt][hand] then
 		local prop = playerList[playerEnt][hand]
@@ -278,15 +355,18 @@ function DebugUpdate()
 		if IsValidEntity(prop) then
 
 			if status.carried then
-
-				DebugDrawSphere(prop:GetAbsOrigin(), Vector(0, 255, 0), 255, 4, false, interval)
-				DebugDrawLine(prop:GetAbsOrigin(), status.hand:GetAbsOrigin(), 0, 255, 0, false, interval)
+			
+				DebugDrawSphere(prop:GetAbsOrigin(), Vector(0, 255, 0), 255, 4, true, interval)
+				DebugDrawLine(prop:GetAbsOrigin(), status.hand:GetAbsOrigin(), 0, 255, 0, true, interval)
+				
+				local handSide = (status.hand:GetHandID() == 1) and "Right" or "Left"
 				local debugText = prop:GetClassname() .. ":" .. prop:GetName() .. "[" .. prop:GetEntityIndex()
-					.. "]\nplayer: " .. status.player:GetUserID() .. "\nhand: " .. status.hand:GetHandID()
+					.. "]\nplayer: " .. status.player:GetUserID() .. "\nhand: " .. handSide .. " (" .. status.hand:GetHandID() .. ")"
+					
 				DebugDrawText(prop:GetAbsOrigin(), debugText, false, interval)
 
 			else
-				DebugDrawSphere(prop:GetAbsOrigin(), Vector(255, 0, 0), 255, 4, false, interval)
+				DebugDrawSphere(prop:GetAbsOrigin(), Vector(255, 0, 0), 255, 4, true, interval)
 			end
 		end
 	end

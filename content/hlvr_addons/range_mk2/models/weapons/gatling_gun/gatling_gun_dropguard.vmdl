@@ -1,0 +1,60 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default_silent"
+						collision_prop = "default"
+						origin = [ -2.31397, -0.043801, 0.150092 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 25.9039, 10.097842, 6.088801 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderPrimitiveBox"
+						name = "box"
+						disabled = true
+						parent_bone = ""
+						material_name = "dev/helper/testgrid.vmat"
+						origin = [ -2.31397, -0.043801, 0.294395 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						max_u = 1.0
+						max_v = 1.0
+						dimensions = [ 25.9039, 10.0978, 5.800194 ]
+						segments_x = 1
+						segments_y = 1
+						segments_z = 1
+					},
+					{
+						_class = "RenderMeshFile"
+						disabled = true
+						filename = "models/weapons/gatling_gun/gatling_gun_test.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
+		anim_graph_name = ""
+	}
+}

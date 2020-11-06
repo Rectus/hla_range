@@ -1,0 +1,47 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "vr_complex.vfx"
+
+	//---- Normal ----
+	F_USE_BENT_NORMALS 1
+
+	//---- PBR ----
+	F_ANISOTROPIC_GLOSS 1
+	F_METALNESS_TEXTURE 1
+	F_SPECULAR 1
+
+	//---- Ambient Occlusion ----
+	g_flAmbientOcclusionDirectDiffuse "0.000"
+	g_flAmbientOcclusionDirectSpecular "0.000"
+	TextureAmbientOcclusion "materials/models/weapons/gatling_gun/gatling_gun_ao.png"
+
+	//---- Color ----
+	g_flModelTintAmount "1.000"
+	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
+	TextureColor "materials/models/weapons/gatling_gun/gatling_gun_color.png"
+
+	//---- Fade ----
+	g_flFadeExponent "1.000"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Metalness ----
+	TextureMetalness "materials/models/weapons/gatling_gun/gatling_gun_metal.png"
+
+	//---- Normal ----
+	TextureBentNormal "materials/models/weapons/gatling_gun/gatling_gun_bentnormal.png"
+	TextureNormal "materials/models/weapons/gatling_gun/gatling_gun_normal.png"
+
+	//---- Roughness ----
+	TextureRoughness "materials/models/weapons/gatling_gun/gatling_gun_rough.png"
+
+	//---- Texture Coordinates ----
+	g_nScaleTexCoordUByModelScaleAxis "0"
+	g_nScaleTexCoordVByModelScaleAxis "0"
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+	g_vTexCoordScrollSpeed "[0.000 0.000]"
+}

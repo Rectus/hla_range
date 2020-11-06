@@ -1,0 +1,177 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "strap_base"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 0.006124, -0.77475, 0.006905 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.097592, 0.640757, 1.105809 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "strap_1"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 0.36874, -0.007534, 0.012619 ]
+						angles = [ -0.001733, -0.008551, -0.000043 ]
+						dimensions = [ 0.834424, 0.278187, 0.911645 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "strap_3"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 0.20667, -0.00751, 0.01736 ]
+						angles = [ -0.001733, -0.008551, -0.000043 ]
+						dimensions = [ 0.428937, 0.278187, 1.401622 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "strap_5"
+						surface_prop = "base.cloth"
+						collision_prop = "default"
+						origin = [ 1.358197, 0.004298, -0.001096 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 2.538996, 0.278187, 0.976454 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						disabled = true
+						parent_bone = "gun"
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.0, 3.052711, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 1.0, 1.48818, 1.0 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "strap"
+						filename = "models/weapons/mac10/mac10_strap.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "PhysicsJointRevolute"
+						disabled = true
+						parent_body = ""
+						child_body = "strap_base"
+						anchor_origin = [ 3.935032, 0.0, 0.0 ]
+						anchor_angles = [ 90.0, 0.0, 0.0 ]
+						collision_enabled = false
+						friction = 0.02
+						enable_limit = false
+						min_angle = 0.0
+						max_angle = 0.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "strap_base"
+						child_body = "strap_1"
+						anchor_origin = [ 0.114401, -1.258492, -0.0 ]
+						anchor_angles = [ 0.0, -90.0, 0.0 ]
+						collision_enabled = true
+						friction = 0.015
+						enable_limit = true
+						min_angle = -90.0
+						max_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "strap_1"
+						child_body = "strap_3"
+						anchor_origin = [ 0.901638, -0.000201, 0.010467 ]
+						anchor_angles = [ 0.0, 0.0, 0.0 ]
+						collision_enabled = true
+						friction = 0.02
+						enable_limit = true
+						min_angle = -161.0
+						max_angle = 139.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "strap_3"
+						child_body = "strap_5"
+						anchor_origin = [ 0.456173, 0.000002, 0.003285 ]
+						anchor_angles = [ 0.0, 0.0, 0.0 ]
+						collision_enabled = true
+						friction = 0.05
+						enable_limit = true
+						min_angle = -147.300003
+						max_angle = 141.800003
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						name = "_copy"
+						parent_body = "gun"
+						child_body = "strap_base"
+						anchor_origin = [ -0.023687, 3.972832, -0.000001 ]
+						anchor_angles = [ 0.0, 0.0, 90.0 ]
+						collision_enabled = false
+						friction = 0.02
+						enable_limit = false
+						min_angle = 0.0
+						max_angle = 0.0
+					},
+				]
+			},
+			{
+				_class = "BoneMarkupList"
+				bone_cull_type = "Leaf Only"
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "prop_data"
+						game_keys = 
+						{
+							base = ""
+							allowstatic = false
+							bakelighting = false
+							damage_table = ""
+							"dmg.bullets" = -1.0
+							"dmg.club" = -1.0
+							"dmg.explosive" = -1.0
+							"dmg.fire" = -1.0
+							health = -1.0
+							spawn_motion_disabled = false
+						}
+					},
+				]
+			},
+		]
+		model_archetype = "jointed_physics_model"
+		primary_associated_entity = "prop_ragdoll"
+		anim_graph_name = ""
+	}
+}

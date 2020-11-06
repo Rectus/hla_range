@@ -1,0 +1,77 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "vr_projected_decals.vfx"
+
+	//---- Decal ----
+	F_ALPHA_MODE 1 // Cutoff
+	F_CUTOFF_ANGLE 1
+
+	//---- Lighting ----
+	F_SAMPLE_LIGHTMAP 1
+
+	//---- Normal ----
+	F_NORMAL_MAP 1
+
+	//---- Parallax Occlusion ----
+	F_PARALLAX 1
+
+	//---- Specular ----
+	F_SPECULAR 1
+	F_SPECULAR_CUBE_MAP 1 // In-game Cube Map
+
+	//---- Alpha ----
+	g_flAlphaCutoffSoftness "0.340"
+
+	//---- Ambient Occlusion ----
+	TextureAmbientOcclusion "materials/particle/food/bean_single_ao.png"
+
+	//---- Color ----
+	TextureColor "materials/particle/food/bean_single_color.png"
+
+	//---- Decal ----
+	g_flCutoffAngle "60.000"
+	g_flCutoffAngleSoftness "5.000"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Lighting ----
+	g_flDirectionalLightmapMinZ "0.050"
+	g_flDirectionalLightmapStrength "1.000"
+
+	//---- Metalness ----
+	TextureMetalness "materials/default/default_metal.tga"
+
+	//---- Normal ----
+	TextureNormal "materials/particle/food/bean_single_normal.png"
+
+	//---- Parallax ----
+	g_flHeightMapScale "0.032"
+	g_nLODThreshold "4"
+	g_nMaxSamples "32"
+	g_nMinSamples "8"
+	TextureHeight "materials/particle/food/bean_single_height.png"
+
+	//---- Roughness ----
+	TextureRoughness "materials/particle/food/bean_single_roughness.png"
+
+	//---- Translucent ----
+	TextureTranslucency "materials/particle/food/bean_single_trans.png"
+
+	Attributes
+	{
+		DecalRenderOrder "2"
+		DecalSizeVariance "0.100000"
+		DecalWorldHeight "0.500000"
+		DecalWorldWidth "0.500000"
+	}
+
+	SystemAttributes
+	{
+		PhysicsSurfaceProperties "world.slime"
+		WorldMappingWidth "1"
+		WorldMappingHeight "1"
+	}
+}

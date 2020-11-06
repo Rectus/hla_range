@@ -68,6 +68,18 @@
 					<Button class="TextButton" onactivate="SpawnItem('headcrab')">
 						<Label class="Text" text="Floor Chicken" />
 					</Button>
+					
+					<Button class="TextButton" onactivate="SpawnItem('prop_beanball')">
+						<Label class="Text" text="Baked Bean Ball" />
+					</Button>
+					
+					<Button class="TextButton" onactivate="SpawnItem('weapon_gatling_gun')">
+						<Label class="Text" text="Gatling Gun" />
+					</Button>
+					
+					<Button class="TextButton" onactivate="SpawnItem('weapon_mac10_beans')">
+						<Label class="Text" text="MAC 'n Beans" />
+					</Button>
 				</Panel>
 			</Panel>
 

@@ -1,0 +1,57 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "vr_projected_decals.vfx"
+
+	//---- Decal ----
+	F_TRIPLANAR_MAPPING 1
+
+	//---- Lighting ----
+	F_SAMPLE_LIGHTMAP 1
+
+	//---- Normal ----
+	F_NORMAL_MAP 1
+
+	//---- Specular ----
+	F_SPECULAR 1
+	F_SPECULAR_CUBE_MAP 1 // In-game Cube Map
+
+	//---- Ambient Occlusion ----
+	TextureAmbientOcclusion "materials/particle/food/bean_splatter_ao.png"
+
+	//---- Color ----
+	TextureColor "materials/particle/food/bean_splatter_color.png"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Lighting ----
+	g_flDirectionalLightmapMinZ "0.050"
+	g_flDirectionalLightmapStrength "1.000"
+
+	//---- Metalness ----
+	TextureMetalness "materials/default/default_metal.tga"
+
+	//---- Normal ----
+	TextureNormal "materials/particle/food/bean_splatter_normal.png"
+
+	//---- Roughness ----
+	TextureRoughness "materials/particle/food/bean_splatter_roughness.png"
+
+	//---- Translucent ----
+	TextureTranslucency "materials/particle/food/bean_splatter_trans.png"
+
+	Attributes
+	{
+		DecalRenderOrder "1"
+		DecalSizeVariance "2"
+		DecalWorldHeight "8"
+		DecalWorldWidth "8"
+	}
+
+	SystemAttributes
+	{
+		PhysicsSurfaceProperties "world.slime"
+	}
+}

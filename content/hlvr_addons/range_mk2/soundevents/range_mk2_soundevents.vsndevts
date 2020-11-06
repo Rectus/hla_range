@@ -1,5 +1,41 @@
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 {
+
+	Custom_Weapon.Gatling_Load =
+	{
+		type = "hlvr_default_3d"
+		volume = 0.9
+		attachment = "load"
+		vsnd_files = 
+		[
+			"sounds/physics/props/ammo_clip_pistol/contents_01.vsnd",
+			"sounds/physics/props/ammo_clip_pistol/contents_02.vsnd",
+			"sounds/physics/props/ammo_clip_pistol/contents_03.vsnd",
+			"sounds/physics/props/ammo_clip_pistol/contents_04.vsnd",
+			"sounds/physics/props/ammo_clip_pistol/contents_05.vsnd",
+			"sounds/physics/props/ammo_clip_pistol/contents_06.vsnd",
+			"sounds/physics/props/ammo_clip_pistol/contents_07.vsnd",
+			"sounds/physics/props/ammo_clip_pistol/contents_08.vsnd"
+		]
+	}
+
+	Custom_Weapon.Gatling_Pin =
+	{
+		type = "hlvr_default_3d"
+		volume = 0.5
+		attachment = "chamber"
+		vsnd_files = "sounds/weapons/shotgun/shotgun_empty.vsnd"
+	}
+
+	Custom_Weapon.Gatling_Eject =
+	{
+		type = "hlvr_default_3d"
+		volume = 0.3
+		pitch = 1.2
+		attachment = "shell_eject"
+		vsnd_files = "sounds/weapons/shotgun/shotgun_empty.vsnd"
+	}
+
 	Custom_Weapon.Pipe_Shotgun_Slide_Loop =
 	{
 		type = "hlvr_update_animinteractable"

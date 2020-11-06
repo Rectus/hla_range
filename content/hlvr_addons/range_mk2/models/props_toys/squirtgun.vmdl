@@ -6,10 +6,6 @@
 		children = 
 		[
 			{
-				_class = "BoneMarkupList"
-				bone_cull_type = "Leaf Only"
-			},
-			{
 				_class = "GameDataList"
 				children = 
 				[
@@ -32,11 +28,24 @@
 					},
 					{
 						_class = "GenericGameData"
+						game_class = "handpose_data"
+						game_keys = 
+						{
+							handpose_bone = ""
+							handpose_model = "custom"
+							allow_procedural_handpose = false
+							global_pose_template = false
+						}
+					},
+					{
+						_class = "GenericGameData"
+						name = "_copy"
+						disabled = true
 						game_class = "hand_pose_pair"
 						game_keys = 
 						{
 							sequence = "cylinder_idle"
-							pose_special_type = "1"
+							pose_special_type = "0"
 							conform_fingers = false
 							allow_flip = false
 							parent_bone = ""
@@ -50,6 +59,78 @@
 							finger_ring = 0.820915
 							finger_middle = 0.828064
 							finger_index = 0.765984
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.0, 0.0, 2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, -0.0, 2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = false
+							rotation_axis0 = [ 0.0, 0.0, 10.0 ]
+							rotation_axis1 = [ 0.0, 0.0, -10.0 ]
+							rotation_min = 0.0
+							rotation_max = 0.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+					{
+						_class = "GenericGameData"
+						name = "squeeze"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "cylinder_idle"
+							pose_special_type = "1"
+							conform_fingers = false
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ -0.811572, 0.795078, -2.93668 ]
+							angles_left = [ 0.0, 0.0, -6.71271 ]
+							origin_right = [ -0.811572, -0.795078, -2.93668 ]
+							angles_right = [ 0.0, 0.0, 6.71271 ]
+							max_distance = 3.0
+							finger_thumb = 0.785967
+							finger_pinky = 0.87804
+							finger_ring = 0.820915
+							finger_middle = 0.828064
+							finger_index = 0.765984
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ -0.811572, 0.795078, -2.0 ]
+							extent_origin_min_left = [ -0.811572, 0.795078, -2.93668 ]
+							extent_origin_right = [ -0.811572, -0.795078, -2.93668 ]
+							extent_origin_min_right = [ -0.811572, -0.795078, -2.0 ]
+							has_rotation = false
+							rotation_axis0 = [ 0.0, 0.0, 10.0 ]
+							rotation_axis1 = [ 0.0, 0.0, -10.0 ]
+							rotation_min = 0.0
+							rotation_max = 0.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+					{
+						_class = "GenericGameData"
+						name = "squeeze_target"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "cylinder_idle"
+							pose_special_type = "2"
+							conform_fingers = false
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ -0.811572, 0.795078, -2.93668 ]
+							angles_left = [ 0.0, 0.0, -6.71271 ]
+							origin_right = [ -0.811572, -0.795078, -2.93668 ]
+							angles_right = [ 0.0, 0.0, 6.71271 ]
+							max_distance = 3.0
+							finger_thumb = 1.0
+							finger_pinky = 1.0
+							finger_ring = 1.0
+							finger_middle = 0.934687
+							finger_index = 0.93779
 							has_extent = false
 							show_extent_helper = false
 							extent_origin_left = [ 0.0, 0.0, 2.0 ]
@@ -102,53 +183,6 @@
 							pivot_max = 0.0
 						}
 					},
-					{
-						_class = "GenericGameData"
-						game_class = "handpose_data"
-						game_keys = 
-						{
-							handpose_bone = ""
-							handpose_model = "custom"
-							allow_procedural_handpose = false
-							global_pose_template = false
-						}
-					},
-					{
-						_class = "GenericGameData"
-						name = "target2"
-						game_class = "hand_pose_pair"
-						game_keys = 
-						{
-							sequence = "cylinder_idle"
-							pose_special_type = "2"
-							conform_fingers = false
-							allow_flip = false
-							parent_bone = ""
-							origin_left = [ -0.811572, 0.795078, -2.93668 ]
-							angles_left = [ 0.0, 0.0, -6.71271 ]
-							origin_right = [ -0.811572, -0.795078, -2.93668 ]
-							angles_right = [ 0.0, 0.0, 6.71271 ]
-							max_distance = 5.0
-							finger_thumb = 1.0
-							finger_pinky = 1.0
-							finger_ring = 1.0
-							finger_middle = 0.934687
-							finger_index = 0.93779
-							has_extent = false
-							show_extent_helper = false
-							extent_origin_left = [ 0.0, 0.0, 2.0 ]
-							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
-							extent_origin_right = [ 0.0, -0.0, 2.0 ]
-							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
-							has_rotation = false
-							rotation_axis0 = [ 0.0, 0.0, 10.0 ]
-							rotation_axis1 = [ 0.0, 0.0, -10.0 ]
-							rotation_min = 0.0
-							rotation_max = 0.0
-							pivot_min = 0.0
-							pivot_max = 0.0
-						}
-					},
 				]
 			},
 			{
@@ -167,7 +201,7 @@
 						filename = "models/props_toys/squirtgun.dmx"
 						import_scale = 1.0
 						faceMergeAngle = 10.0
-						maxHullVertices = 0
+						maxHullVertices = 42
 						import_mode = "SingleHull"
 						optimization_algorithm = "QEM"
 						import_filter = 
@@ -184,7 +218,18 @@
 				[
 					{
 						_class = "RenderMeshFile"
+						disabled = true
 						filename = "models/props_toys/squirtgun.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						filename = "models/props_toys/squirtgun_morph.dmx"
 						import_scale = 1.0
 						import_filter = 
 						{
@@ -201,6 +246,7 @@
 					{
 						_class = "AnimFile"
 						name = "idle"
+						disabled = true
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -224,8 +270,8 @@
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
+						fade_in_time = 0.0
+						fade_out_time = 0.0
 						looping = false
 						delta = false
 						worldSpace = false
@@ -248,8 +294,8 @@
 					{
 						_class = "Attachment"
 						name = "nozzle"
-						parent_bone = "gun"
-						relative_origin = [ 3.401999, 0.0, 0.0 ]
+						parent_bone = ""
+						relative_origin = [ 4.687986, 0.0, 0.0 ]
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false

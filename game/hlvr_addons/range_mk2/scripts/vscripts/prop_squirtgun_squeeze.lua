@@ -12,7 +12,7 @@ local firing = false
 local PUMP_RATE = 1.0
 local streamParticle = -1
 
-local FIRE_THINK_INTERVAL = FrameTime()
+local FIRE_THINK_INTERVAL = 1
 local STREAM_TRACE_DURATION = 2
 local STREAM_SPEED = 200
 local STREAM_GRAVITY = Vector(0, 0, -100)
@@ -28,9 +28,17 @@ function Precache(context)
 
 	PrecacheResource("particle", "particles/weapons/squirtgun_single_stream.vpcf", context)
 end
---particles/weapons/squirtgun_continuous.vpcf
+
 
 function Activate(atype)
+
+	-- Hack to properly handle restoration from saves, 
+	-- since variables written by Activate() on restore don't end up in the script scope.
+	EntFireByHandle(thisEntity, thisEntity, "CallScriptFunction", "SetupState")	
+end
+
+
+function SetupState()
 
 	SetWaterLevel(waterLevel)
 	thisEntity:RegisterAnimTagListener(TagHandler)
@@ -49,7 +57,6 @@ function TagHandler(tagName, status)
 		end
 	end
 end
-
 
 
 function TriggerThink()
@@ -117,14 +124,14 @@ function FireThink()
 	end
 
 	for stream, particle in pairs(streams) do
-		if StreamTrace(stream, FIRE_THINK_INTERVAL) then
+		if StreamTrace(stream, FrameTime() * FIRE_THINK_INTERVAL) then
 			ParticleManager:DestroyParticle(particle, false)
 			streams[stream] = nil
 			numStreams = numStreams - 1
 		end
 	end
 
-	return FIRE_THINK_INTERVAL
+	return FrameTime() * FIRE_THINK_INTERVAL
 end
 
 

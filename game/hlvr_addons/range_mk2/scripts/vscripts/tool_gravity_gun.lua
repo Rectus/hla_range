@@ -31,8 +31,8 @@ local CARRY_DISTANCE = 16
 local CARRY_GLUE_DISTANCE = 6
 local TRACE_DISTANCE = 1024
 local TRACE_RADIUS = 3
-local OBJECT_PULL_INTERVAL = FrameTime()
-local BEAM_TRACE_INTERVAL = FrameTime()
+local OBJECT_PULL_INTERVAL = 1
+local BEAM_TRACE_INTERVAL = 1
 local PUNT_DISTANCE = 512
 local CLAMP_VEL_IMPULSE = 1
 local COUNTER_IMPULSE_FACTOR = 0.1
@@ -44,6 +44,7 @@ local PULL_TORQUE_FACTOR = 1
 local animEnt = nil
 local gripEnt = nil
 local playerEnt = nil
+local dropGuard = nil
 local handID = 1
 local handEnt = nil
 local pulledObject = nil
@@ -161,15 +162,26 @@ function Precache(context)
 	
 	PrecacheModel("models/tools/gravity_gun/gravity_gun_body_anim.vmdl", context)
 	PrecacheModel("models/tools/gravity_gun/gravity_gun_body_grip.vmdl", context)
+	PrecacheModel("models/tools/gravity_gun/gravity_gun_dropguard.vmdl", context)
+	
 end
 
-function Activate()
+function Activate(activateType)
 
-	-- Make sure there aren't any old children left on load.
-	for _, ent in pairs(thisEntity:GetChildren()) do
-		ent:Kill()
+	if activateType == ACTIVATE_TYPE_ONRESTORE -- on game load
+	then	
+		-- Make sure there aren't any old children left on load.
+		for _, ent in pairs(thisEntity:GetChildren()) do
+			ent:Kill()
+		end
 	end
 	
+	EntFireByHandle(thisEntity, thisEntity, "CallScriptFunction", "SpawnParts")
+end
+
+
+function SpawnParts()
+
 	gripEnt = SpawnEntityFromTableSynchronous(GRIP_KEYVALS.classname, GRIP_KEYVALS)
 	gripEnt:SetParent(thisEntity, "")
 	gripEnt:SetLocalOrigin(Vector(0,0,0))
@@ -184,6 +196,20 @@ function Activate()
 	animEnt:SetLocalOrigin(Vector(0,0,0))
 	animEnt:SetLocalAngles(0,0,0)
 	animEnt:SetSequence("idle")
+	
+	
+	local entKeyvals =
+	{
+		model = "models/tools/gravity_gun/gravity_gun_dropguard.vmdl";
+		interactAs = "player";
+		solid = 6;
+		origin = thisEntity:GetAbsOrigin();
+		angles = thisEntity:GetAngles();
+	}
+	
+	dropGuard = SpawnEntityFromTableSynchronous("prop_dynamic", entKeyvals)
+	dropGuard:SetParent(thisEntity, "")
+	dropGuard:SetAbsScale(0.01)
 end
 
 
@@ -236,7 +262,7 @@ function UpdateGrip(params)
 	
 	local handType = playerEnt:GetHMDAvatar():GetVRHand(0):GetLiteralHandType()
 
-	local button = player:IsDigitalActionOnForHand(handType, 16)
+	local button = playerEnt:IsDigitalActionOnForHand(handType, 16)
 	
 	if button and not laserButton then
 		if not showLaser then
@@ -252,10 +278,11 @@ end
 
 
 function OnHandleGrabbed()
-	thisEntity:SetThink(UpdateCarriedIdle, "update_beam", BEAM_TRACE_INTERVAL)
+	thisEntity:SetThink(UpdateCarriedIdle, "update_beam", FrameTime() * BEAM_TRACE_INTERVAL)
 	isTargeting = true
 	gripHeld = true
 	StartLaser()
+	dropGuard:SetAbsScale(1)
 end
 
 
@@ -269,6 +296,7 @@ function OnHandleReleased()
 	isTargeting = false
 	gripHeld = false
 	StopLaser()
+	dropGuard:SetAbsScale(0.01)
 end
 
 
@@ -420,7 +448,7 @@ function SetupPull(hitEnt, hitPos)
 	pulledObjectLocalPos = hitEnt:TransformPointWorldToEntity(hitPos)
 
 	print("Gravity gun grabbed entity: " .. hitEnt:GetDebugName())
-	thisEntity:SetThink(PullObjectFrame, "gravitygun_pull", OBJECT_PULL_INTERVAL)
+	thisEntity:SetThink(PullObjectFrame, "gravitygun_pull", FrameTime() * OBJECT_PULL_INTERVAL)
 
 	animEnt:SetGraphParameterFloat("open", 1)
 	RumbleController(1, 0.3, 50, handEnt)
@@ -450,7 +478,7 @@ function EndPull()
 		StopBeam()
 		RumbleController(1, 0.15, 40, handEnt)
 		thisEntity:SetThink(StartLaser, "laser_delay", 0.1)
-		thisEntity:SetThink(UpdateCarriedIdle, "update_beam", BEAM_TRACE_INTERVAL)
+		thisEntity:SetThink(UpdateCarriedIdle, "update_beam", FrameTime() * BEAM_TRACE_INTERVAL)
 	end
 
 	if isCarrying
@@ -470,7 +498,7 @@ function Punt()
 		pulledObject = nil
 		isCarrying = false
 		StopSoundEvent("Physcannon.HoldLoop", thisEntity)
-		thisEntity:SetThink(UpdateCarriedIdle, "update_beam", BEAM_TRACE_INTERVAL)
+		thisEntity:SetThink(UpdateCarriedIdle, "update_beam", FrameTime() * BEAM_TRACE_INTERVAL)
 		StopBeam()
 
 	else
@@ -547,7 +575,7 @@ function UpdateCarriedIdle()
 		ParticleManager:SetParticleControl(laserParticle, 1, pos)
 	end
 
-	return BEAM_TRACE_INTERVAL
+	return FrameTime() * BEAM_TRACE_INTERVAL
 end
 
 
@@ -672,6 +700,7 @@ function PullObjectFrame()
 		return nil
 	end
 
+	local deltaT = FrameTime() * OBJECT_PULL_INTERVAL
 	local mass = RemapVal(pulledObject:GetMass(), 0, 100, 0, 1)
 
 	local objectPos = pulledObject:TransformPointEntityToWorld(pulledObjectLocalPos / pulledObject:GetAbsScale())
@@ -685,7 +714,7 @@ function PullObjectFrame()
 	local pullDir = pullVec:Normalized()
 
 	local m = GetAttachment("muzzle")
-	--DebugDrawLine(pullPos, objectPos, 255, 0, 255, true, OBJECT_PULL_INTERVAL)
+	--DebugDrawLine(pullPos, objectPos, 255, 0, 255, true, deltaT)
 
 	pulledObjectInPuntRange = distance >= PUNT_DISTANCE
 
@@ -712,18 +741,17 @@ function PullObjectFrame()
 	local pullGravFactor = RemapValClamped(distance, TRACE_DISTANCE / 2, PULL_EASE_DISTANCE, 0, 1)
 
 	local gravityAcc = Convars:GetInt("sv_gravity")
-	local gravImpulse = Vector(0, 0, gravityAcc * pullGravFactor * OBJECT_PULL_INTERVAL)
+	local gravImpulse = Vector(0, 0, gravityAcc * pullGravFactor * deltaT)
 
 	local pullMassFactor = RemapValClamped(pulledObject:GetMass(), 0, 100, 1, 0.1)
 
-	local pullImpulse =  pullDir * MAX_PULL_IMPULSE * math.log(1 + pullFactor) * OBJECT_PULL_INTERVAL * pullMassFactor
-
+	local pullImpulse =  pullDir * MAX_PULL_IMPULSE * math.log(1 + pullFactor) * deltaT * pullMassFactor
 
 
 	pulledObject:ApplyAbsVelocityImpulse(pullImpulse + gravImpulse)
 	thisEntity:ApplyAbsVelocityImpulse(-pullImpulse * 0.5)
 
-	local pose = RemapVal(MAX_PULL_IMPULSE * pullFactor * OBJECT_PULL_INTERVAL * mass, 0, 100, 0, 1)
+	local pose = RemapVal(MAX_PULL_IMPULSE * pullFactor * deltaT * mass, 0, 100, 0, 1)
 	animEnt:SetGraphParameterFloat("needle", pose)
 	animEnt:SetGraphParameterFloat("pull", pullFactor)
 
@@ -750,9 +778,9 @@ function PullObjectFrame()
 		end
 	end
 
-	SetPhysAngularVelocity(pulledObject, (1 - ROTATION_DAMPING_FACTOR * OBJECT_PULL_INTERVAL) * GetPhysAngularVelocity(pulledObject) + (rotAngVel + gravAngVel) * OBJECT_PULL_INTERVAL * pullMassFactor + carryAngvel * OBJECT_PULL_INTERVAL)
+	SetPhysAngularVelocity(pulledObject, (1 - ROTATION_DAMPING_FACTOR * deltaT) * GetPhysAngularVelocity(pulledObject) + (rotAngVel + gravAngVel) * deltaT * pullMassFactor + carryAngvel * deltaT)
 
-	return OBJECT_PULL_INTERVAL
+	return deltaT
 end
 
 

@@ -1,0 +1,336 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "prop_data"
+						game_keys = 
+						{
+							base = "Item.Medium"
+							allowstatic = false
+							bakelighting = true
+							damage_table = ""
+							"dmg.bullets" = -1.0
+							"dmg.club" = -1.0
+							"dmg.explosive" = -1.0
+							"dmg.fire" = -1.0
+							health = -1.0
+							spawn_motion_disabled = false
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "handpose_data"
+						game_keys = 
+						{
+							handpose_bone = ""
+							handpose_model = "custom"
+							allow_procedural_handpose = false
+							global_pose_template = false
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "vr_carry_type"
+						game_keys = 
+						{
+							carry_type = "0"
+						}
+					},
+					{
+						_class = "GenericGameData"
+						disabled = true
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "idle"
+							pose_special_type = "0"
+							conform_fingers = false
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ 3.92819, 0.514558, -3.29922 ]
+							angles_left = [ -14.9879, -27.9789, 6.29307 ]
+							origin_right = [ 3.92819, -0.514558, -3.29922 ]
+							angles_right = [ -14.987898, 27.978899, -6.293069 ]
+							max_distance = 0.0
+							finger_thumb = 0.838
+							finger_pinky = 0.571429
+							finger_ring = 0.712069
+							finger_middle = 0.748
+							finger_index = 0.64
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.0, 0.0, 2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, -0.0, 2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = false
+							rotation_axis0 = [ 0.0, 0.0, 10.0 ]
+							rotation_axis1 = [ 0.0, 0.0, -10.0 ]
+							rotation_min = 0.0
+							rotation_max = 0.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "hand_pose_pair"
+						game_keys = 
+						{
+							sequence = "cylinder_idle"
+							pose_special_type = "1"
+							conform_fingers = false
+							allow_flip = false
+							parent_bone = ""
+							origin_left = [ -1.76967, 0.844445, -3.29435 ]
+							angles_left = [ -6.11497, 7.6488, -1.76258 ]
+							origin_right = [ -1.76967, -0.844445, -3.29435 ]
+							angles_right = [ -6.11497, -7.648801, 1.76258 ]
+							max_distance = 0.0
+							finger_thumb = 1.0
+							finger_pinky = 0.802
+							finger_ring = 0.814
+							finger_middle = 0.826
+							finger_index = 0.257
+							has_extent = false
+							show_extent_helper = false
+							extent_origin_left = [ 0.0, -0.0, -2.0 ]
+							extent_origin_min_left = [ 0.0, 0.0, -1.0 ]
+							extent_origin_right = [ 0.0, 0.0, -2.0 ]
+							extent_origin_min_right = [ 0.0, 0.0, 1.0 ]
+							has_rotation = false
+							rotation_axis0 = [ 0.0, 0.0, 10.0 ]
+							rotation_axis1 = [ 0.0, 0.0, -10.0 ]
+							rotation_min = 0.0
+							rotation_max = 0.0
+							pivot_min = 0.0
+							pivot_max = 0.0
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 0.05752, -0.42873, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 2.408136, 8.615037, 1.657348 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy"
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 2.994224, -1.51601, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 3.454998, 2.19928, 1.195085 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						name = "_copy1_copy"
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						radius = 0.31
+						point0 = [ 0.0, 3.91733, 0.0 ]
+						point1 = [ 0.0, 5.285738, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy1"
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 2.448416, 0.366268, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.094248, 1.492254, 0.621997 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy1_copy1"
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 2.2491, 1.272584, 0.0 ]
+						angles = [ 0.0, 45.0, 0.0 ]
+						dimensions = [ 0.094248, 0.594181, 0.621997 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy1_copy1_copy"
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 1.651423, 1.46451, -0.0 ]
+						angles = [ 0.0, 90.0, 0.0 ]
+						dimensions = [ 0.094248, 0.845808, 0.621997 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy2"
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 0.098173, -5.3614, 0.0 ]
+						angles = [ -0.0, 3.304667, 0.000001 ]
+						dimensions = [ 4.042504, 0.29051, 1.427706 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy2_copy"
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ -1.687079, -3.628361, -0.0 ]
+						angles = [ -0.000011, 79.382713, 0.000013 ]
+						dimensions = [ 3.512966, 0.213644, 1.275981 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "_copy3"
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ -1.23472, 3.50725, 0.0 ]
+						angles = [ -0.000001, 26.105059, 0.000006 ]
+						dimensions = [ 0.520657, 0.632008, 0.936606 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						name = "magazine"
+						parent_bone = "gun"
+						surface_prop = "prop.metal_gun"
+						collision_prop = "default"
+						origin = [ 7.329296, -1.19166, 0.010713 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 5.116108, 1.394975, 0.938064 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "mac10"
+						filename = "models/weapons/mac10/mac10_frame.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						disabled = true
+						filename = "models/weapons/mac10/mac10_magazine.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						disabled = true
+						filename = "models/weapons/mac10/mac10_animated.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						disabled = true
+						filename = "models/weapons/mac10/mac10_strap.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						children = 
+						[
+							{
+								_class = "RenderMeshMarkup"
+								material_search_path = "materials/food/"
+								use_expensive_tangents = false
+								high_high_precision_texcoords = false
+								calc_per_vertex_curvature = false
+								prefer_high_density_tris_in_uv_density_calc = false
+							},
+						]
+						disabled = true
+						filename = "models/weapons/mac10/mac10_beans.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "muzzle"
+						parent_bone = ""
+						relative_origin = [ 5.626029, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "bullet_origin"
+						parent_bone = ""
+						relative_origin = [ 6.179972, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "strap"
+						parent_bone = "gun"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 90.0, -90.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+		]
+		model_archetype = "physics_prop_model"
+		primary_associated_entity = "prop_physics"
+		anim_graph_name = ""
+	}
+}
